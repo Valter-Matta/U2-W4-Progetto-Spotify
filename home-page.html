@@ -10,15 +10,416 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- foglio css -->
+    <link rel="stylesheet" href="./assets/css/home-page.css" />
+    <!-- icone -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col col-3"></div>
-          <div class="col col-7"></div>
-          <div class="col col-2"></div>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col col-lg-2 d-none d-md-block"></div>
+        <div class="col col-12 col-lg-9">
+          <!-- carosello ok -->
+          <div
+            id="carouselExample"
+            class="carousel slide p-4 bg-black d-none d-lg-block"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex w-100">
+                  <img
+                    src="/assets/imgs/main/image-17.jpg"
+                    class="d-block"
+                    width="200px"
+                    height="200px"
+                    alt="..."
+                  />
+                  <div
+                    class="testo-carosello ps-3 d-flex flex-column justify-content-around"
+                  >
+                    <p>Album</p>
+                    <h1>Titolo (feat. Artista)</h1>
+                    <p>artisti</p>
+                    <p>Ascolta il nuovo singolo di Fedex e Salmo</p>
+                    <div
+                      class="button-box d-flex justify-content-start align-items-center"
+                    >
+                      <button
+                        class="px-4 py-2 rounded-5 ms-3 text-black"
+                        id="play"
+                      >
+                        Play
+                      </button>
+                      <button
+                        class="save-button px-4 py-2 rounded-5 ms-3 me-3 text-white"
+                      >
+                        Salva
+                      </button>
+                      <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex w-100">
+                  <img
+                    src="/assets/imgs/main/image-5.jpg"
+                    class="d-block"
+                    width="200px"
+                    height="200px"
+                    alt="..."
+                  />
+                  <div
+                    class="testo-carosello ps-3 d-flex flex-column justify-content-around"
+                  >
+                    <p>Album</p>
+                    <h1>Titolo (feat. Artista)</h1>
+                    <p>artisti</p>
+                    <p>Ascolta</p>
+                    <div
+                      class="button-box d-flex justify-content-start align-items-center"
+                    >
+                      <button
+                        class="px-4 py-2 rounded-5 ms-3 text-black"
+                        id="play"
+                      >
+                        Play
+                      </button>
+                      <button
+                        class="save-button px-4 py-2 rounded-5 ms-3 me-3 text-white"
+                      >
+                        Salva
+                      </button>
+                      <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex w-100">
+                  <img
+                    src="/assets/imgs/main/image-7.jpg"
+                    class="d-block"
+                    width="200px"
+                    height="200px"
+                    alt="..."
+                  />
+                  <div
+                    class="testo-carosello ps-3 d-flex flex-column justify-content-around"
+                  >
+                    <p>Album</p>
+                    <h1>Titolo (feat. Artista)</h1>
+                    <p>artisti</p>
+                    <p>Ascolta il nuovo singolo di Fedex e Salmo</p>
+                    <div
+                      class="button-box d-flex justify-content-start align-items-center"
+                    >
+                      <button
+                        class="px-4 py-2 rounded-5 ms-3 text-black"
+                        id="play"
+                      >
+                        Play
+                      </button>
+                      <button
+                        class="save-button px-4 py-2 rounded-5 ms-3 me-3 text-white"
+                      >
+                        Salva
+                      </button>
+                      <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon w-75"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon w-75"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <section class="row px-3 g-3 px-lg-0">
+            <div
+              class="header d-flex justify-content-between align-items-center pt-5"
+            >
+              <h1>Buonasera</h1>
+              <div
+                class="d-flex d-lg-none justify-content-around align-items-center"
+              >
+                <div class="bell">
+                  <i class="far fa-bell"></i>
+                  <i id="dot" class="fas fa-circle"></i>
+                </div>
+                <i class="fas fa-history"></i>
+                <i class="fas fa-cog"></i>
+              </div>
+            </div>
+            <ul class="d-flex list-unstyled justify-content-start pt-3 fs-5">
+              <li class="d-md-none me-5 p-3">Musica</li>
+              <li class="d-md-none p-3">Podcast e Show</li>
+            </ul>
+            <div class="col col-6 col-md-4 d-flex align-items-center">
+              <img
+                class="rounded-start-2"
+                src="./assets/imgs/main/image-10.jpg"
+                width="80px"
+                alt=""
+              />
+              <p class="px-2 m-0 fw-bold">Relax</p>
+            </div>
+            <div class="col col-6 col-md-4 d-flex align-items-center">
+              <img
+                class="rounded-start-2"
+                src="./assets/imgs/main/image-10.jpg"
+                width="80px"
+                alt=""
+              />
+              <p class="px-2 m-0 fw-bold">Relax</p>
+            </div>
+            <div class="col col-6 col-md-4 d-flex align-items-center">
+              <img
+                class="rounded-start-2"
+                src="./assets/imgs/main/image-10.jpg"
+                width="80px"
+                alt=""
+              />
+              <p class="px-2 m-0 fw-bold">Relax</p>
+            </div>
+            <div class="col col-6 col-md-4 d-flex align-items-center">
+              <img
+                class="rounded-start-2"
+                src="./assets/imgs/main/image-10.jpg"
+                width="80px"
+                alt=""
+              />
+              <p class="px-2 m-0 fw-bold">Relax</p>
+            </div>
+            <div class="col col-6 col-md-4 d-flex align-items-center">
+              <img
+                class="rounded-start-2"
+                src="./assets/imgs/main/image-10.jpg"
+                width="80px"
+                alt=""
+              />
+              <p class="px-2 m-0 fw-bold">Relax</p>
+            </div>
+            <div class="col col-6 col-md-4 d-flex align-items-center">
+              <img
+                class="rounded-start-2"
+                src="./assets/imgs/main/image-10.jpg"
+                width="80px"
+                alt=""
+              />
+              <p class="px-2 m-0 fw-bold">Relax</p>
+            </div>
+          </section>
+
+          <h1 class="mt-5 d-none d-lg-block">Altro di ciò che ti piace</h1>
+
+          <article
+            id="player-card-container"
+            class="row g-3 border-0 rounded-4"
+          >
+            <div
+              class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column"
+            >
+              <div id="sfondo-card" class="rounded-4 mt-3">
+                <div class="pb-md-3">
+                  <div class="d-flex flex-md-column p-3 pb-0">
+                    <div class="mb-3 me-3 me-md-0">
+                      <img
+                        src="/assets/imgs/main/image-1.jpg"
+                        class="w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 text-white">
+                      <div class="card-body">
+                        <h5 class="opacity-50 fw-light">Playlist</h5>
+                        <p class="card-text fw-bold">Study and work space</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section
+                  class="d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2"
+                >
+                  <div>
+                    <i class="fas fa-heart"></i
+                    ><i class="fas fa-ellipsis-v"></i>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <p class="m-0 d-lg-none">n°brani js</p>
+                    <i class="fas fa-play-circle"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div
+              class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column"
+            >
+              <div id="sfondo-card" class="rounded-4 mt-3">
+                <div class="pb-md-3">
+                  <div class="d-flex flex-md-column p-3 pb-0">
+                    <div class="mb-3 me-3 me-md-0">
+                      <img
+                        src="/assets/imgs/main/image-1.jpg"
+                        class="w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 text-white">
+                      <div class="card-body">
+                        <h5 class="opacity-50 fw-light">Playlist</h5>
+                        <p class="card-text fw-bold">Study and work space</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section
+                  class="d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2"
+                >
+                  <div>
+                    <i class="fas fa-heart"></i
+                    ><i class="fas fa-ellipsis-v"></i>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <p class="m-0 d-lg-none">n°brani js</p>
+                    <i class="fas fa-play-circle"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div
+              class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column"
+            >
+              <div id="sfondo-card" class="rounded-4 mt-3">
+                <div class="pb-md-3">
+                  <div class="d-flex flex-md-column p-3 pb-0">
+                    <div class="mb-3 me-3 me-md-0">
+                      <img
+                        src="/assets/imgs/main/image-1.jpg"
+                        class="w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 text-white">
+                      <div class="card-body">
+                        <h5 class="opacity-50 fw-light">Playlist</h5>
+                        <p class="card-text fw-bold">Study and work space</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section
+                  class="d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2"
+                >
+                  <div>
+                    <i class="fas fa-heart"></i
+                    ><i class="fas fa-ellipsis-v"></i>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <p class="m-0 d-lg-none">n°brani js</p>
+                    <i class="fas fa-play-circle"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div
+              class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column"
+            >
+              <div id="sfondo-card" class="rounded-4 mt-3">
+                <div class="pb-md-3">
+                  <div class="d-flex flex-md-column p-3 pb-0">
+                    <div class="mb-3 me-3 me-md-0">
+                      <img
+                        src="/assets/imgs/main/image-1.jpg"
+                        class="w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 text-white">
+                      <div class="card-body">
+                        <h5 class="opacity-50 fw-light">Playlist</h5>
+                        <p class="card-text fw-bold">Study and work space</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section
+                  class="d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2"
+                >
+                  <div>
+                    <i class="fas fa-heart"></i
+                    ><i class="fas fa-ellipsis-v"></i>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <p class="m-0 d-lg-none">n°brani js</p>
+                    <i class="fas fa-play-circle"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div
+              class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column"
+            >
+              <div id="sfondo-card" class="rounded-4 mt-3">
+                <div class="pb-md-3">
+                  <div class="d-flex flex-md-column p-3 pb-0">
+                    <div class="mb-3 me-3 me-md-0">
+                      <img
+                        src="/assets/imgs/main/image-1.jpg"
+                        class="w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 text-white">
+                      <div class="card-body">
+                        <h5 class="opacity-50 fw-light">Playlist</h5>
+                        <p class="card-text fw-bold">Study and work space</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section
+                  class="d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2"
+                >
+                  <div>
+                    <i class="fas fa-heart"></i
+                    ><i class="fas fa-ellipsis-v"></i>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <p class="m-0 d-lg-none">n°brani js</p>
+                    <i class="fas fa-play-circle"></i>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </article>
         </div>
+        <div class="col col-lg-1 d-none d-md-block"></div>
       </div>
     </main>
 

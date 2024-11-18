@@ -1,0 +1,72 @@
+body {
+  background-color: #121212;
+  color: white;
+}
+main {
+  width: 95%;
+}
+div > i {
+  margin: 0 0.8rem;
+  font-size: 1.8em;
+}
+/* Carosello */
+#carouselExample {
+  margin-top: 5rem;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.carousel-control-prev {
+  position: absolute;
+  top: -50px;
+}
+.carousel-control-next {
+  position: absolute;
+  top: -50px;
+  left: 50px;
+}
+.save-button {
+  background-color: black;
+  border: 1px solid white;
+}
+#play {
+  background-color: #1ed760;
+  color: #121212;
+  font-weight: 700;
+}
+/* buonasera */
+section i {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 992px) {
+  div > i {
+    margin: 0 0.6rem;
+    font-size: 1em;
+  }
+}
+
+.bell {
+  position: relative;
+}
+#dot {
+  font-size: 0.58rem;
+  position: absolute;
+  right: 15px;
+  top: -5px;
+  border: 3px solid black;
+  border-radius: 50%;
+  color: #3e89ea;
+}
+
+#sfondo-card {
+  background-color: #242424;
+}
+
+.opacity-50 {
+  font-size: 1rem;
+}
