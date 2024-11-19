@@ -77,3 +77,18 @@ section i {
   width: 325px;
   height: 325px;
 }
+
+/* Spinners */
+.spinner-0 {
+  position: absolute;
+  bottom: 250px;
+  width: 100px;
+  height: 100px;
+}
+
+.spinner-1 {
+  position: absolute;
+  top: 250px;
+  width: 80px;
+  height: 80px;
+}
