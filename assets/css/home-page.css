@@ -1,202 +1,205 @@
 body {
-  background-color: #121212;
-  color: white;
+	background-color: #121212;
+	color: white;
 }
 main {
-  width: 95%;
+	width: 95%;
 }
 div > i {
-  margin: 0 0.8rem;
-  font-size: 1.8em;
+	margin: 0 0.8rem;
+	font-size: 1.8em;
 }
 /* Carosello */
 #carouselExample {
-  margin-top: 5rem;
+	margin-top: 5rem;
 }
 .carousel-control-prev,
 .carousel-control-next {
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 50%;
 }
 
 .carousel-control-prev {
-  position: absolute;
-  top: -50px;
+	position: absolute;
+	top: -50px;
 }
 .carousel-control-next {
-  position: absolute;
-  top: -50px;
-  left: 50px;
+	position: absolute;
+	top: -50px;
+	left: 50px;
 }
 .save-button {
-  background-color: black;
-  border: 1px solid white;
+	background-color: black;
+	border: 1px solid white;
 }
 #play {
-  background-color: #1ed760;
-  color: #121212;
-  font-weight: 700;
+	background-color: #1ed760;
+	color: #121212;
+	font-weight: 700;
 }
 /* buonasera */
 section i {
-  font-size: 1.8rem;
+	font-size: 1.8rem;
 }
 .sfondo {
-  background-color: #2d2d2d;
+	background-color: #2d2d2d;
 }
 @media screen and (min-width: 992px) {
-  div > i {
-    margin: 0 0.6rem;
-    font-size: 1em;
-  }
+	div > i {
+		margin: 0 0.6rem;
+		font-size: 1em;
+	}
 }
 /* playlist */
 .bell {
-  position: relative;
+	position: relative;
 }
 #dot {
-  font-size: 0.58rem;
-  position: absolute;
-  right: 15px;
-  top: -5px;
-  border: 3px solid black;
-  border-radius: 50%;
-  color: #3e89ea;
+	font-size: 0.58rem;
+	position: absolute;
+	right: 15px;
+	top: -5px;
+	border: 3px solid black;
+	border-radius: 50%;
+	color: #3e89ea;
 }
 
 .sfondo-card {
-  background-color: #242424;
+	background-color: #242424;
 }
 
 .opacity-50 {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 .playlist-images {
-  width: 325px;
-  height: 325px;
+	width: 325px;
+	height: 325px;
 }
 
+/* Spinners */
+.spinner-0 {
+	position: absolute;
+	bottom: 250px;
+	width: 100px;
+	height: 100px;
+}
 
-
-
-
-
+.spinner-1 {
+	position: absolute;
+	top: 250px;
+	width: 80px;
+	height: 80px;
+}
 
 /*CSS PER LE COLONNE*/
 @font-face {
-  font-family: 'Spotify Circular'; /* Nome che userai nel CSS */
-  src: url('./../fonts/CircularStd-Black.otf') format('opentype'); /* Percorso e formato del font */
-  font-style: normal; /* Puoi specificare lo stile (normal, italic, etc.) */
+	font-family: "Spotify Circular"; /* Nome che userai nel CSS */
+	src: url("./../fonts/CircularStd-Black.otf") format("opentype"); /* Percorso e formato del font */
+	font-style: normal; /* Puoi specificare lo stile (normal, italic, etc.) */
 }
 
 /*SEZIONE COLONNA SINISTRA*/
 
-#ColLeft{
-  padding-right: 0;
+#ColLeft {
+	padding-right: 0;
 }
 
 #dots {
-
-  line-height: 0.5;
-  display: flex !important;
-  padding: 0 !important; /* Rimuove padding interno */
-  margin: 0 !important;  /* Rimuove margini */
- box-sizing: border-box; /* Assicura che padding e bordo siano inclusi nelle dimensioni */
- font-size: 1.3em;
- letter-spacing: 0.1em;
+	line-height: 0.5;
+	display: flex !important;
+	padding: 0 !important; /* Rimuove padding interno */
+	margin: 0 !important; /* Rimuove margini */
+	box-sizing: border-box; /* Assicura che padding e bordo siano inclusi nelle dimensioni */
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
 }
 
-
-#UlHome{
-  font-family: 'Spotify Circular', sans-serif;
-  list-style: none;
-  padding: 0; 
-  margin: 0; 
-  font-size: 14px;
-  opacity: 0.7;    
+#UlHome {
+	font-family: "Spotify Circular", sans-serif;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	opacity: 0.7;
 }
 
-#LiHome{
-  display: flex; 
-  align-items: center; 
-  gap: 8px; 
-  margin-bottom: 10px;
-  cursor: pointer;
-
+#LiHome {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 10px;
+	cursor: pointer;
 }
 
-.row{
-  margin-left: 0.5em !important;
+.row {
+	margin-left: 0.5em !important;
 }
 
 /* Contenitore della sezione scorrevole */
 .playlist-section {
-  height: calc(100vh - 270px); /* Altezza dinamica: adatta il valore "300px" per le altre sezioni sopra */
-  overflow-y: auto; /* Scroll verticale */
-  padding-right: 5px; /* Aggiunge spazio per la scrollbar */
-  padding-bottom: 0 !important;
-  opacity: 0.5;
+	height: calc(
+		100vh - 270px
+	); /* Altezza dinamica: adatta il valore "300px" per le altre sezioni sopra */
+	overflow-y: auto; /* Scroll verticale */
+	padding-right: 5px; /* Aggiunge spazio per la scrollbar */
+	padding-bottom: 0 !important;
+	opacity: 0.5;
 }
 
 /* Stile per gli elementi della lista */
 .playlist-item {
-  font-size: 0.85rem; /* Testo più piccolo */
-  color: white; /* Colore grigio chiaro */
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
+	font-size: 0.85rem; /* Testo più piccolo */
+	color: white; /* Colore grigio chiaro */
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
 }
 
 .playlist-item:hover {
-  color: #fff; /* Colore bianco al passaggio del mouse */
+	color: #fff; /* Colore bianco al passaggio del mouse */
 }
 
 /* Personalizzazione della scrollbar */
 .playlist-section::-webkit-scrollbar {
-  width: 12px; /* Larghezza della scrollbar */
+	width: 12px; /* Larghezza della scrollbar */
 }
 
 .playlist-section::-webkit-scrollbar-thumb {
-  background-color: white; /* Colore verde */
-  opacity: 0.9;
-  border-radius: 0px; /* Arrotondamento per un look moderno */
+	background-color: white; /* Colore verde */
+	opacity: 0.9;
+	border-radius: 0px; /* Arrotondamento per un look moderno */
 }
 
 .playlist-section::-webkit-scrollbar-track {
-  background: #121212; /* Colore dello sfondo della scrollbar */
+	background: #121212; /* Colore dello sfondo della scrollbar */
 }
-
 
 /*FINE SEZIONE COLONNA SINISTRA*/
 
 /********************************************************************************************************************************************/
 
 /*INIZIO COLONNA DESTRA*/
-#DivAttivitàAmici{
-  padding-left: 1em;
-  padding-top: 1em;
-
+#DivAttivitàAmici {
+	padding-left: 1em;
+	padding-top: 1em;
 }
 
-#SVG{
-  margin-right: 0.8em;
+#SVG {
+	margin-right: 0.8em;
 }
 
-.fa-user-plus{
-  margin-left: 50px;
-  opacity: 0.6;
-
+.fa-user-plus {
+	margin-left: 50px;
+	opacity: 0.6;
 }
 
-.fa-times{
-  opacity: 0.6;
+.fa-times {
+	opacity: 0.6;
 }
 
-#DivIcons{
-  overflow: visible; /* Assicurati che l'icona sia visibile */
-
+#DivIcons {
+	overflow: visible; /* Assicurati che l'icona sia visibile */
 }
 
 /*FINE COLONNA DESTRA*/
-
