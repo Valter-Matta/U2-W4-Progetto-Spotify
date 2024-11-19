@@ -52,7 +52,7 @@ section i {
     font-size: 1em;
   }
 }
-
+/* playlist */
 .bell {
   position: relative;
 }
@@ -66,10 +66,14 @@ section i {
   color: #3e89ea;
 }
 
-#sfondo-card {
+.sfondo-card {
   background-color: #242424;
 }
 
 .opacity-50 {
   font-size: 1rem;
+}
+.playlist-images {
+  width: 325px;
+  height: 325px;
 }
