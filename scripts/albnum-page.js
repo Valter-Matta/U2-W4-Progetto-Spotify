@@ -1,11 +1,13 @@
 // crea un canvas con l'immagine e ne ritorno il context 2d
 const draw = function (img) {
+  const fixedWidth = 10
+  const fixedHeight = 10
   let canvas = document.createElement('canvas')
   let c = canvas.getContext('2d')
-  c.width = canvas.width = img.clientWidth
-  c.height = canvas.height = img.clientHeight
+  c.width = canvas.width = fixedWidth
+  c.height = canvas.height = fixedHeight
   c.clearRect(0, 0, c.width, c.height)
-  c.drawImage(img, 0, 0, img.clientWidth, img.clientHeight)
+  c.drawImage(img, 0, 0, fixedWidth, fixedHeight)
   return c
 }
 
@@ -72,6 +74,8 @@ const generateImage = function () {
         id="img"
         crossorigin="anonymous"
         onload="start()"
+        style="width: 250px; height: 250px; object-fit: cover;"
+        class="m-3"
       />`
 }
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spotify Player</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./assets/css/player.css" />
+		<script type="text/javascript" src="./scripts/song.js" defer></script>
+		<script type="text/javascript" src="./scripts/playlist.js" defer></script>
+		<script
+			type="text/javascript"
+			src="./scripts/music_player.js"
+			defer
+		></script>
+		<script type="text/javascript" src="./scripts/app.js" defer></script>
+	</head>
+	<body>
+		<div class="music-player-container">
+			<audio src="" id="playing-song"></audio>
+			<div class="song">WIP</div>
+			<div class="music-player" data-playing="false">
+				<nav class="music-player-actions">
+					<ul>
+						<li>
+							<button id="player-previous-button">
+								<i class="fas fa-backward"></i>
+							</button>
+						</li>
+						<li>
+							<button id="player-play-pause-button" class="btn-play-pause">
+								<i class="fas fa-play"></i>
+								<i class="fas fa-pause"></i>
+							</button>
+						</li>
+						<li>
+							<button id="player-next-button">
+								<i class="fas fa-forward"></i>
+							</button>
+						</li>
+					</ul>
+				</nav>
+				<div class="progress-wrapper">
+					<div class="progress-container">
+						<div class="progress"></div>
+					</div>
+				</div>
+			</div>
+			<div class="options">
+				<div class="volume-wrapper">
+					<div class="volume-container">
+						<div class="volume-bar" data-volume="23"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
