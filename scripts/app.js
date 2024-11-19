@@ -11,10 +11,10 @@ const volumeBar = document.querySelector(".volume-bar");
 const volumeWrapper = document.querySelector(".volume-wrapper");
 
 const playlist = new Playlist(
-	new Song("01", 125),
-	new Song("02", 79),
-	new Song("03", 122),
-	new Song("04", 90),
+	new Song("./assets/mp3/01.mp3", 125),
+	new Song("./assets/mp3/02.mp3", 79),
+	new Song("./assets/mp3/03.mp3", 122),
+	new Song("./assets/mp3/04.mp3", 90),
 );
 
 const musicPlayer = new MusicPlayer(

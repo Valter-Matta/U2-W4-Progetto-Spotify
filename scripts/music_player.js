@@ -86,6 +86,7 @@ class MusicPlayer {
 
 		// ASSIGN PLAYLIST
 		this.playlist = playlist;
+		this.#songElement.src = this.#playlist.current().src;
 
 		// VOLUME
 		this.volume = 20;
@@ -225,7 +226,7 @@ class MusicPlayer {
 				"Invalid song: the song must be an instance of the Song class",
 			);
 		// TODO Update this source when the Song object will change
-		this.#songElement.src = `assets/${song.src}.mp3`;
+		this.#songElement.src = song.src;
 		this.play();
 	}
 
