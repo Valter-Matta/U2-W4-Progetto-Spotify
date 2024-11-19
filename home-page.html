@@ -20,8 +20,8 @@
   </head>
   <body>
     <main class="container-fluid">
-      <div class="row">
-        <div class="col col-lg-1 d-none d-md-block" style="width: 20%; padding-left: 0;" id="ColLeft">
+      <div class="row p-0 p-md-0">
+        <div class="col-2 col-lg-2 bg-black d-none d-lg-block" id="ColLeft" style="padding-left: 0;">
           <!-- Main Navigation -->
           <div class="nav-section mt-0 p-3" >
             <div class="container-fluid text-white p-0" >
@@ -96,7 +96,7 @@
           </div>
 
         </div>
-        <div class="col col-12 col-lg-1" style="width: 65%;">
+        <div class="col-12 col-lg-8 text-center">
           <!-- carosello ok -->
           <div
             id="carouselExample"
@@ -505,7 +505,7 @@
             </div>
           </article>
         </div>
-        <div class="col col-lg-1 d-none d-md-block" style="width: 15%;">
+        <div class="col-3 col-lg-2 bg-dark text-white d-none d-lg-block ps-0">
 
           <div class="d-flex justify-content-between" id="DivAttivitàAmici">
             <h6>Attività amici</h6>
@@ -612,6 +612,35 @@
             </div>
           </div>
         </div>
+        </div>
+
+
+        <div id="StickyButtons" class="d-block d-lg-none text-white p-3" style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 0; font-size: 10px;   font-family: 'Spotify Circular', sans-serif;">
+          <div class="container-fluid">
+            <div class="row justify-content-evenly align-items-center" style="margin: 0;">
+              <!-- Primo bottone -->
+              <div class="col-auto text-center">
+                <button class="btn" style="background: none; border: none; color: white;">
+                  <i class="fas fa-home fs-4 opacity-75 " FixedText></i>
+                </button>
+                <p class="mt-1 mb-0 text-white" id="FixedText">Home</p>
+              </div>
+              <!-- Secondo bottone -->
+              <div class="col-auto text-center">
+                <button class="btn" style="background: none; border: none; color: white;">
+                  <i class="fas fa-search fs-4 opacity-75 " FixedText></i>
+                </button>
+                <p class="mt-1 mb-0 text-white" id="FixedText">Search</p>
+              </div>
+              <!-- Terzo bottone -->
+              <div class="col-auto text-center">
+                <button class="btn" style="background: none; border: none; color: white;">
+                  <i class="fas fa-book fs-4 opacity-75 " FixedText></i>
+                </button>
+                <p class="mt-1 mb-0 text-white" id="FixedText">La tua Libreria</p>
+              </div>
+            </div>
+          </div>
         </div>
     </main>
 

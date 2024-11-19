@@ -11,7 +11,8 @@
       crossorigin="anonymous"
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/left-and-right-column.css">
+    <link rel="stylesheet" href="./assets/css/artist-page.css">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
   </head>
@@ -19,8 +20,8 @@
   <body>
     <main>
       <div class="container-fluid">
-        <div class="row">
-          <div class="col col-1 bg-black" style="width: 20%" id="ColLeft">
+        <div class="row p-0 p-md-0">
+          <div class="col col-1 bg-black d-none d-md-block" style="width: 20%;">
             <!-- Main Navigation -->
             <div class="nav-section mt-0 p-3" >
               <div class="container-fluid text-white p-0" >
@@ -95,7 +96,7 @@
             </div>
 
           </div>
-          <div class="col col-1 mt-4" style="width: 65%">
+          <div class="col col-1 mt-2" style="width: 65%">
             <section class="d-flex justify-content-between">
               <div>
                 <a href="#"><i class="bi bi-caret-left-fill"></i></a>
@@ -143,7 +144,7 @@
               </div>
             </section>
           </div>   
-          <div class="col d-none d-lg-block col-1 text-white ps-0 bg-dark" style="max-height: 100vh; width: 15%;">
+          <div class="col col-1 text-white ps-0 bg-dark  d-none d-md-block" style="width: 15%">
             <div class="d-flex justify-content-between" id="DivAttivitàAmici">
               <h6>Attività amici</h6>
               <div id="DivIcons" style="display: flex; align-items: center; justify-content: space-between; overflow: visible;">
@@ -251,6 +252,37 @@
           </div>
         </div>
        </div>
+      
+       <div id="StickyButtons" class="d-block d-lg-none text-white p-3" style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 0; font-size: 10px;   font-family: 'Spotify Circular', sans-serif;">
+        <div class="container-fluid">
+          <div class="row justify-content-evenly align-items-center" style="margin: 0;">
+            <!-- Primo bottone -->
+            <div class="col-auto text-center">
+              <button class="btn" style="background: none; border: none; color: white;">
+                <i class="fas fa-home fs-4 opacity-75 " FixedText></i>
+              </button>
+              <p class="mt-1 mb-0 text-white" id="FixedText">Home</p>
+            </div>
+            <!-- Secondo bottone -->
+            <div class="col-auto text-center">
+              <button class="btn" style="background: none; border: none; color: white;">
+                <i class="fas fa-search fs-4 opacity-75 " FixedText></i>
+              </button>
+              <p class="mt-1 mb-0 text-white" id="FixedText">Search</p>
+            </div>
+            <!-- Terzo bottone -->
+            <div class="col-auto text-center">
+              <button class="btn" style="background: none; border: none; color: white;">
+                <i class="fas fa-book fs-4 opacity-75 " FixedText></i>
+              </button>
+              <p class="mt-1 mb-0 text-white" id="FixedText">La tua Libreria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
       
     </main>
 
