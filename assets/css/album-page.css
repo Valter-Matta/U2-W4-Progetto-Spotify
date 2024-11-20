@@ -1,4 +1,5 @@
 /*CSS PER LE COLONNE*/
+
 @font-face {
 	font-family: "Spotify Circular"; /* Nome che userai nel CSS */
 	src: url("./../fonts/CircularStd-Black.otf") format("opentype"); /* Percorso e formato del font */
