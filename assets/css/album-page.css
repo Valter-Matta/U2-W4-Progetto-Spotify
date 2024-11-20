@@ -1,4 +1,5 @@
 /*CSS PER LE COLONNE*/
+
 @font-face {
 	font-family: "Spotify Circular"; /* Nome che userai nel CSS */
 	src: url("./../fonts/CircularStd-Black.otf") format("opentype"); /* Percorso e formato del font */
@@ -78,7 +79,63 @@
 
 /*FINE SEZIONE COLONNA SINISTRA*/
 
-/********************************************************************************************************************************************/
+/* inizio colonna centrale***************************************************/
+#containerino {
+	width: 50%;
+}
+@media screen and (min-width: 768px) {
+	#containerino {
+		width: 40%;
+		height: 40%;
+	}
+}
+@media screen and (min-width: 992px) {
+	#containerino {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+.icone {
+	font-size: 1rem;
+}
+.bi-play-circle-fill {
+	font-size: 1.4rem;
+}
+
+@media screen and (min-width: 440px) {
+	.icone {
+		font-size: 1.4rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 2.1rem;
+	}
+}
+@media screen and (min-width: 678px) {
+	.icone {
+		font-size: 1.8rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 2.5rem;
+	}
+}
+@media screen and (min-width: 768px) {
+	.icone {
+		font-size: 2.1rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 3.4rem;
+	}
+}
+@media screen and (min-width: 992px) {
+	.icone {
+		font-size: 1.5rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 3rem;
+	}
+}
+/* finito colonna centrale */
 
 /*INIZIO COLONNA DESTRA*/
 #DivAttivitàAmici {
