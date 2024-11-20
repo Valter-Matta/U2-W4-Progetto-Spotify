@@ -1,3 +1,4 @@
+// DODOC FIXME
 function queryByGenres(genre, callback) {
 	fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
 		.then(result => {
@@ -5,11 +6,12 @@ function queryByGenres(genre, callback) {
 			else throw new Error("C'è un errore nella chiamata"); // FIXME
 		})
 		.then(({ data: songs }) => {
-			console.log(songs); //FIXME
+			console.log(songs); //TEMP
 			callback.call(songs);
 		});
 }
 
+// DODOC FIXME
 function addSongToBuonaseraCollection(genre) {
 	const container = document.getElementById("buonasera-collection");
 
@@ -19,12 +21,13 @@ function addSongToBuonaseraCollection(genre) {
 	});
 }
 
+// DODOC
 function addPlaylistToPlaylistCollection(genre) {
 	const container = document.getElementById("player-card-container");
 
 	queryByGenres(genre, function () {
+		// FIXME
 		function foo({ album: { id } }) {
-			// FIXME
 			fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
 				.then(result => {
 					if (result.ok) return result.json();
