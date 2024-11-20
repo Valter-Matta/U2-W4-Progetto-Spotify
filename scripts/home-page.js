@@ -16,19 +16,6 @@ const GenPlayList = function (genere, description) {
 			// genero le playlist cards
 			const playListSection = document.getElementById("player-card-container");
 			const newCol = document.createElement("div");
-			newCol.classList.add(
-				"col",
-				"col-12",
-				"col-md-6",
-				"p-3",
-				"p-lg-2",
-				"col-lg-4",
-				"col-xxl",
-				"d-flex",
-				"flex-column",
-				"justify-content-center",
-				"m-0",
-			);
 			newCol.innerHTML = `
         <div class="rounded-4 sfondo-card h-100">
           <div class="pb-md-3">
