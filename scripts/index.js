@@ -1,6 +1,6 @@
 // DODOC
 function query(query, error, callback) {
-	fetch(query)
+	return fetch(query)
 		.then(result => {
 			if (result.ok) return result.json();
 			else throw error;
@@ -10,7 +10,7 @@ function query(query, error, callback) {
 
 // DODOC
 function queryByGenre(genre, callback) {
-	query(
+	return query(
 		`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`,
 		new Error(
 			`Error fetching data from Deezer API: https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`,
@@ -20,7 +20,7 @@ function queryByGenre(genre, callback) {
 }
 
 function queryBySong(id, callback) {
-	query(
+	return query(
 		`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
 		new Error(
 			`Error fetching data from Deezer API: https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
@@ -31,7 +31,7 @@ function queryBySong(id, callback) {
 
 // DODOC
 function addSong(genre, container) {
-	queryByGenre(genre, function () {
+	return queryByGenre(genre, function () {
 		const songObj = this[Math.floor(Math.random() * this.length)];
 		new GraphicSong(songObj, container).render();
 	});
@@ -39,7 +39,7 @@ function addSong(genre, container) {
 
 // DODOC
 function addPlaylist(genre, container) {
-	queryByGenre(genre, function () {
+	return queryByGenre(genre, function () {
 		const songs = this.sort(_ => Math.random() - 0.5);
 		foo(songs.pop());
 
@@ -64,12 +64,30 @@ function addPlaylist(genre, container) {
 
 const songContainer = document.getElementById("buonasera-collection");
 const playlistContainer = document.getElementById("player-card-container");
+const spinnerSongs = document.querySelector(".spinner-0");
+const spinnerAlbums = document.querySelector(".spinner-1");
 
 // NOTE bind
-["gemitaiz", "marracash", "salmo", "punkrock", "defcon1", "fuck"].forEach(
-	genre => addSong(genre, songContainer),
+
+[("gemitaiz", "marracash", "salmo", "punkrock", "defcon1", "fuck")].forEach(
+	genre =>
+		addSong(genre, songContainer).then(spinnerSongs.classList.add("d-none")),
 );
 
 ["gemitaiz", "marracash", "salmo", "punkrock", "defcon1"].forEach(genre =>
-	addPlaylist(genre, playlistContainer),
+	addPlaylist(genre, playlistContainer).then(
+		spinnerAlbums.classList.add("d-none"),
+	),
 );
+
+// COLOR
+
+const colorThief = new ColorThief();
+const img = document.querySelector("img");
+
+// Make sure image is finished loading
+if (img.complete) console.log(colorThief.getColor(img));
+else
+	image.addEventListener("load", function () {
+		console.log(colorThief.getColor(img));
+	});
