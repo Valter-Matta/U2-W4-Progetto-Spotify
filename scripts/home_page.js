@@ -1,3 +1,4 @@
+// DODOC
 class HomePage {
 	#songsContainer;
 	#playlistsContainer;
