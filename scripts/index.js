@@ -1,21 +1,45 @@
-const songContainer = document.getElementById("buonasera-collection");
-const playlistContainer = document.getElementById("player-card-container");
+const songsContainer = document.getElementById("buonasera-collection");
+const playlistsContainer = document.getElementById("player-card-container");
 const spinnerSongs = document.querySelector(".spinner-0");
 const spinnerAlbums = document.querySelector(".spinner-1");
 
-const addSongToSongContainer = addSong.bind(songContainer);
-const addPlaylistToPlaylistContainer = addPlaylist.bind(playlistContainer);
+const homePageApp = new HomePage({
+	songsContainer,
+	playlistsContainer,
+	spinnerSongs,
+	spinnerAlbums,
+});
 
-["gemitaiz", "marracash", "salmo", "punkrock", "defcon1", "fuck"].forEach(
-	genre =>
-		addSongToSongContainer(genre).then(spinnerSongs.classList.add("d-none")),
+homePageApp.populateSongs(
+	"gemitaiz",
+	"marracash",
+	"salmo",
+	"punkrock",
+	"defcon1",
+	"fuck",
 );
 
-["gemitaiz", "marracash", "salmo", "punkrock", "defcon1"].forEach(genre =>
-	addPlaylistToPlaylistContainer(genre).then(
-		spinnerAlbums.classList.add("d-none"),
-	),
+homePageApp.populateAlbums(
+	"gemitaiz",
+	"marracash",
+	"salmo",
+	"punkrock",
+	"defcon1",
 );
+
+// const addSongToSongContainer = addSong.bind(songsContainer);
+// const addPlaylistToPlaylistContainer = addPlaylist.bind(playlistsContainer);
+
+// ["gemitaiz", "marracash", "salmo", "punkrock", "defcon1", "fuck"].forEach(
+// 	genre =>
+// 		addSongToSongContainer(genre).then(spinnerSongs.classList.add("d-none")),
+// );
+
+// ["gemitaiz", "marracash", "salmo", "punkrock", "defcon1"].forEach(genre =>
+// 	addPlaylistToPlaylistContainer(genre).then(
+// 		spinnerAlbums.classList.add("d-none"),
+// 	),
+// );
 
 // COLOR
 
