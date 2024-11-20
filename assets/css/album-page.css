@@ -1,131 +1,116 @@
-
-
-
 /*CSS PER LE COLONNE*/
 @font-face {
-    font-family: 'Spotify Circular'; /* Nome che userai nel CSS */
-    src: url('./../fonts/CircularStd-Black.otf') format('opentype'); /* Percorso e formato del font */
-    font-style: normal; /* Puoi specificare lo stile (normal, italic, etc.) */
-  }
-  
-  /*SEZIONE COLONNA SINISTRA*/
-  
-  #ColLeft{
-    padding-right: 0;
-  }
-  
-  #dots {
-  
-    line-height: 0.5;
-    display: flex !important;
-    padding: 0 !important; /* Rimuove padding interno */
-    margin: 0 !important;  /* Rimuove margini */
-   box-sizing: border-box; /* Assicura che padding e bordo siano inclusi nelle dimensioni */
-   font-size: 1.3em;
-   letter-spacing: 0.1em;
-  }
-  
-  
-  #UlHome{
-    font-family: 'Spotify Circular', sans-serif;
-    list-style: none;
-    padding: 0; 
-    margin: 0; 
-    font-size: 14px;
-    opacity: 0.7;    
-  }
-  
-  #LiHome{
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-    margin-bottom: 10px;
-    cursor: pointer;
-  
-  }
-  
-  .row{
-    margin-left: 0.5em !important;
-  }
-  
-  /* Contenitore della sezione scorrevole */
-  .playlist-section {
-    height: calc(100vh - 270px); /* Altezza dinamica: adatta il valore "300px" per le altre sezioni sopra */
-    overflow-y: auto; /* Scroll verticale */
-    padding-right: 5px; /* Aggiunge spazio per la scrollbar */
-    padding-bottom: 0 !important;
-    opacity: 0.5;
-  }
-  
-  /* Stile per gli elementi della lista */
-  .playlist-item {
-    font-size: 0.85rem; /* Testo più piccolo */
-    color: white; /* Colore grigio chiaro */
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .playlist-item:hover {
-    color: #fff; /* Colore bianco al passaggio del mouse */
-  }
-  
-  /* Personalizzazione della scrollbar */
-  .playlist-section::-webkit-scrollbar {
-    width: 12px; /* Larghezza della scrollbar */
-  }
-  
-  .playlist-section::-webkit-scrollbar-thumb {
-    background-color: white; /* Colore verde */
-    opacity: 0.9;
-    border-radius: 0px; /* Arrotondamento per un look moderno */
-  }
-  
-  .playlist-section::-webkit-scrollbar-track {
-    background: #121212; /* Colore dello sfondo della scrollbar */
-  }
-  
-  
-  /*FINE SEZIONE COLONNA SINISTRA*/
-  
-  /********************************************************************************************************************************************/
-  
-  /*INIZIO COLONNA DESTRA*/
-  #DivAttivitàAmici{
-    padding-left: 1em;
-    padding-top: 1em;
-  
-  }
-  
-  #SVG{
-    margin-right: 0.8em;
-  }
-  
-  .fa-user-plus{
-    margin-left: 50px;
-    opacity: 0.6;
-  
-  }
-  
-  .fa-times{
-    opacity: 0.6;
-  }
-  
-  #DivIcons{
-    overflow: visible; /* Assicurati che l'icona sia visibile */
-  
-  }
-  
-  /*FINE COLONNA DESTRA*/
-  
-
-
-
-  /*CSS PER IL FIXED BUTTONS */
-  
-#StickyButtons{
-  opacity: 0.9;
+	font-family: "Spotify Circular"; /* Nome che userai nel CSS */
+	src: url("./../fonts/CircularStd-Black.otf") format("opentype"); /* Percorso e formato del font */
+	font-style: normal; /* Puoi specificare lo stile (normal, italic, etc.) */
 }
 
-#FixedText{
-  opacity: 0.3;
+/*SEZIONE COLONNA SINISTRA*/
+
+#ColLeft {
+	padding-right: 0;
+}
+
+#dots {
+	line-height: 0.5;
+	display: flex !important;
+	padding: 0 !important; /* Rimuove padding interno */
+	margin: 0 !important; /* Rimuove margini */
+	box-sizing: border-box; /* Assicura che padding e bordo siano inclusi nelle dimensioni */
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+}
+
+#UlHome {
+	font-family: "Spotify Circular", sans-serif;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	opacity: 0.7;
+}
+
+#LiHome {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+/* Contenitore della sezione scorrevole */
+.playlist-section {
+	height: calc(
+		100vh - 270px
+	); /* Altezza dinamica: adatta il valore "300px" per le altre sezioni sopra */
+	overflow-y: auto; /* Scroll verticale */
+	padding-right: 5px; /* Aggiunge spazio per la scrollbar */
+	padding-bottom: 0 !important;
+	opacity: 0.5;
+}
+
+/* Stile per gli elementi della lista */
+.playlist-item {
+	font-size: 0.85rem; /* Testo più piccolo */
+	color: white; /* Colore grigio chiaro */
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+
+.playlist-item:hover {
+	color: #fff; /* Colore bianco al passaggio del mouse */
+}
+
+/* Personalizzazione della scrollbar */
+.playlist-section::-webkit-scrollbar {
+	width: 12px; /* Larghezza della scrollbar */
+}
+
+.playlist-section::-webkit-scrollbar-thumb {
+	background-color: white; /* Colore verde */
+	opacity: 0.9;
+	border-radius: 0px; /* Arrotondamento per un look moderno */
+}
+
+.playlist-section::-webkit-scrollbar-track {
+	background: #121212; /* Colore dello sfondo della scrollbar */
+}
+
+/*FINE SEZIONE COLONNA SINISTRA*/
+
+/********************************************************************************************************************************************/
+
+/*INIZIO COLONNA DESTRA*/
+#DivAttivitàAmici {
+	padding-left: 1em;
+	padding-top: 1em;
+}
+
+#SVG {
+	margin-right: 0.8em;
+}
+
+.fa-user-plus {
+	margin-left: 50px;
+	opacity: 0.6;
+}
+
+.fa-times {
+	opacity: 0.6;
+}
+
+#DivIcons {
+	overflow: visible; /* Assicurati che l'icona sia visibile */
+}
+
+/*FINE COLONNA DESTRA*/
+
+/*CSS PER IL FIXED BUTTONS */
+
+#StickyButtons {
+	opacity: 0.9;
+}
+
+#FixedText {
+	opacity: 0.3;
 }
