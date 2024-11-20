@@ -117,4 +117,15 @@
   
   /*FINE COLONNA DESTRA*/
   
+
+
+
+  /*CSS PER IL FIXED BUTTONS */
   
+#StickyButtons{
+  opacity: 0.9;
+}
+
+#FixedText{
+  opacity: 0.3;
+}
