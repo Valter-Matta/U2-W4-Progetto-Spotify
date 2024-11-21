@@ -19,7 +19,8 @@ body {
 
 .music-player-container {
 	display: flex;
-	padding: 4.8em;
+	padding: 2em;
+	padding-top: 3rem;
 	background-color: #333;
 	justify-content: space-between;
 	align-items: center;

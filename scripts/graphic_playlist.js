@@ -23,11 +23,11 @@ class GraphicPlaylist extends Playlist {
               <div class="mb-3 me-3 me-md-0 d-flex flex-column rounded rounded-3 overflow-hidden ">
                 <img
 									src="${song.cover}"
-									class="w-50"
+									class="w-100"
 									alt="${song.title}"
 								/>
               </div>
-              <div class="col-6 text-white w-100">
+              <div class="col-6 text-white w-75">
                 <div class="card-body">
                   <h5 class="opacity-50 fw-light">
                     <span>${song.artist}</span>
