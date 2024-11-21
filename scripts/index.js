@@ -232,12 +232,35 @@ const playlistsContainer = document.getElementById("player-card-container");
 const spinnerSongs = document.querySelector(".spinner-0");
 const spinnerAlbums = document.querySelector(".spinner-1");
 
-const homePageApp = new HomePage({
-	songsContainer,
-	playlistsContainer,
-	spinnerSongs,
-	spinnerAlbums,
-});
+const musicPlayerElement = document.querySelector(".music-player");
+const songElement = document.getElementById("playing-song");
+const playPauseButton = document.getElementById("player-play-pause-button");
+const nextButton = document.getElementById("player-next-button");
+const previousButton = document.getElementById("player-previous-button");
+const progressBar = document.querySelector(".music-progress");
+const progressWrapper = document.querySelector(".progress-wrapper");
+const volumeBar = document.querySelector(".volume-bar");
+const volumeWrapper = document.querySelector(".volume-wrapper");
+
+const homePageApp = new HomePage(
+	{
+		songsContainer,
+		playlistsContainer,
+		spinnerSongs,
+		spinnerAlbums,
+	},
+	{
+		musicPlayerElement,
+		songElement,
+		playPauseButton,
+		nextButton,
+		previousButton,
+		progressBar,
+		progressWrapper,
+		volumeBar,
+		volumeWrapper,
+	},
+);
 
 homePageApp.populateSongs(
 	"gemitaiz",
@@ -254,6 +277,7 @@ homePageApp.populateAlbums(
 	"salmo",
 	"punkrock",
 	"defcon1",
+	"rock",
 );
 
 // COLOR

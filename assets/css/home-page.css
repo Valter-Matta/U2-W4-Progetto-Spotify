@@ -77,7 +77,9 @@ section i {
 	width: 325px;
 	height: 325px;
 }
-
+#player-card-container {
+	padding-bottom: 10rem;
+}
 /* Spinners */
 .spinner-0 {
 	position: absolute;
@@ -204,15 +206,12 @@ section i {
 
 /*FINE COLONNA DESTRA*/
 
-
-
-
-#StickyButtons{
-  opacity: 0.9;
+#StickyButtons {
+	opacity: 0.9;
 }
 
-#FixedText{
-  opacity: 0.3;
+#FixedText {
+	opacity: 0.3;
 }
 
 

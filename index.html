@@ -12,6 +12,8 @@
 		/>
 		<!-- foglio css -->
 		<link rel="stylesheet" href="./assets/css/home-page.css" />
+		<!-- css player -->
+		<link rel="stylesheet" href="./assets/css/player.css" />
 		<!-- icone -->
 		<link
 			rel="stylesheet"
@@ -19,6 +21,12 @@
 		/>
 
 		<!-- APP JAVASCRIPT -->
+
+		<script
+			type="text/javascript"
+			src="./scripts/music_player.js"
+			defer
+		></script>
 		<script type="text/javascript" src="./scripts/song.js" defer></script>
 		<script
 			type="text/javascript"
@@ -147,7 +155,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col col-12 col-lg-1" style="width: 65%" id="ColMiddle">
+				<div class="col col-12 col-lg-8">
 					<!-- carosello ok -->
 					<div
 						id="carouselExample"
@@ -302,9 +310,11 @@
 								<i class="fas fa-cog"></i>
 							</div>
 						</div>
-						<ul class="d-flex list-unstyled justify-content-start pt-3 fs-5">
-							<li class="d-md-none me-5 p-3">Musica</li>
-							<li class="d-md-none p-3">Podcast e Show</li>
+						<ul
+							class="d-flex d-lg-none list-unstyled justify-content-start pt-3 fs-5"
+						>
+							<li class="me-5 p-3">Musica</li>
+							<li class="p-3">Podcast e Show</li>
 						</ul>
 						<!-- Qui ora ci ficco uno spinner -->
 						<div class="d-flex justify-content-center">
@@ -318,7 +328,7 @@
 
 					<article
 						id="player-card-container"
-						class="row g-3 border-0 rounded-4"
+						class="row g-3 border-0 rounded-4 mt-3 mb-3"
 					>
 						<!-- Qui ora ci ficco uno spinner -->
 						<div class="d-flex justify-content-center">
@@ -499,6 +509,45 @@
 				  </div>
 				</div>
 			  </div>
+			<!-- music player -->
+			<div class="music-player-container position-fixed w-100 bottom-0">
+				<audio src="" id="playing-song"></audio>
+				<div class="song">WIP</div>
+				<div class="music-player" data-playing="false">
+					<nav class="music-player-actions">
+						<ul>
+							<li>
+								<button id="player-previous-button">
+									<i class="fas fa-backward"></i>
+								</button>
+							</li>
+							<li>
+								<button id="player-play-pause-button" class="btn-play-pause">
+									<i class="fas fa-play"></i>
+									<i class="fas fa-pause"></i>
+								</button>
+							</li>
+							<li>
+								<button id="player-next-button">
+									<i class="fas fa-forward"></i>
+								</button>
+							</li>
+						</ul>
+					</nav>
+					<div class="progress-wrapper">
+						<div class="progress-container">
+							<div class="music-progress"></div>
+						</div>
+					</div>
+				</div>
+				<div class="options">
+					<div class="volume-wrapper">
+						<div class="volume-container">
+							<div class="volume-bar" data-volume="23"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<script

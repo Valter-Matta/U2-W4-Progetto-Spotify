@@ -3,6 +3,8 @@
  * It uses a Playlist object to manage the songs and a Song object to represent each song.
  */
 class MusicPlayer {
+	static #VOLUME_PERCENT = 25;
+
 	// HTML ELEMENTS
 	#musicPlayerElement;
 	#songElement;
@@ -131,7 +133,7 @@ class MusicPlayer {
 	 * @returns {number} The volume level as a percentage.
 	 */
 	get volume() {
-		return this.#volume * 100;
+		return this.#volume * MusicPlayer.#VOLUME_PERCENT;
 	}
 
 	/**
@@ -148,7 +150,7 @@ class MusicPlayer {
 			);
 
 		// actual setting
-		this.#volume = volume / 100 / 100;
+		this.#volume = volume / 100 / MusicPlayer.#VOLUME_PERCENT;
 		this.#songElement.volume = this.#volume;
 		this.#volumeBar.style.width = `${volume.toFixed(0)}%`;
 		this.#volumeBar.dataset.volume = volume.toFixed(0);
@@ -181,6 +183,10 @@ class MusicPlayer {
 	pause() {
 		this.#musicPlayerElement.dataset.playing = "false";
 		this.#songElement.pause();
+	}
+
+	jumpToNumber(index) {
+		this.#changeSong(this.#playlist.getSongByIndex(index));
 	}
 
 	/**
@@ -224,7 +230,6 @@ class MusicPlayer {
 			throw new Error(
 				"Invalid song: the song must be an instance of the Song class",
 			);
-		// TODO Update this source when the Song object will change
 		this.#songElement.src = song.src;
 		this.play();
 	}
@@ -238,7 +243,7 @@ class MusicPlayer {
 	 */
 	#updateProgressBar({ srcElement }) {
 		const { currentTime } = srcElement;
-		const duration = this.#playlist.current().duration;
+		const duration = this.#songElement.duration;
 		const progressPercent = (currentTime / duration) * 100;
 		this.#progressBar.style.width = `${progressPercent}%`;
 	}
@@ -251,7 +256,7 @@ class MusicPlayer {
 	 */
 	#jumpToTime({ offsetX }) {
 		const width = this.#progressWrapper.clientWidth;
-		const duration = this.#playlist.current().duration;
+		const duration = this.#songElement.duration;
 		this.#songElement.currentTime = (offsetX / width) * duration;
 	}
 

@@ -23,11 +23,11 @@ class GraphicPlaylist extends Playlist {
               <div class="mb-3 me-3 me-md-0 d-flex flex-column rounded rounded-3 overflow-hidden ">
                 <img
 									src="${song.cover}"
-									class="w-50"
+									class="w-100"
 									alt="${song.title}"
 								/>
               </div>
-              <div class="col-6 text-white w-100">
+              <div class="col-6 text-white w-75">
                 <div class="card-body">
                   <h5 class="opacity-50 fw-light">
                     <span>${song.artist}</span>
@@ -56,9 +56,9 @@ class GraphicPlaylist extends Playlist {
 
 	renderAlbumPage() {
 		const rowSample = ({ index, title, artist, views, duration }) => `
-      <div class="d-flex py-3 justify-content-between align-items-center">
+      <div class="table-row d-flex p-3 justify-content-between align-items-center" data-index="${index}">
         <div class="d-flex align-items-center w-50">
-          <span class="pe-3 d-none d-lg-inline-block">${index}</span>
+          <span class="index-column pe-3 d-none d-lg-inline-block">${index}</span>
           <div
             class="d-flex flex-column ps-2 justify-content-start align-items-start spans-4"
           >
@@ -91,5 +91,6 @@ class GraphicPlaylist extends Playlist {
 				}),
 			),
 		);
+		return this;
 	}
 }

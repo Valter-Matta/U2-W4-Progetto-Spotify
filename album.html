@@ -22,6 +22,8 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="./assets/css/album-page.css" />
+		<!-- css player -->
+		<link rel="stylesheet" href="./assets/css/player.css" />
 
 		<!-- COLOR THIEF -->
 		<script
@@ -36,7 +38,14 @@
 		></script>
 
 		<!-- APP JS -->
+		<script
+			type="text/javascript"
+			src="./scripts/music_player.js"
+			defer
+		></script>
+
 		<script type="text/javascript" src="./scripts/song.js" defer></script>
+
 		<script
 			type="text/javascript"
 			src="./scripts/graphic_song.js"
@@ -51,6 +60,16 @@
 		<script type="text/javascript" src="./scripts/spotify.js" defer></script>
 		<script type="text/javascript" src="./scripts/album_page.js" defer></script>
 		<script type="text/javascript" src="./scripts/album.js" defer></script>
+
+		<style>
+			.table-row {
+				cursor: pointer;
+
+				&:hover {
+					background-color: #ffffff20;
+				}
+			}
+		</style>
 	</head>
 	<body class="text-white overflow-x-hidden">
 		<main>
@@ -276,7 +295,7 @@
 								class="d-flex flex-column mx-1 px-1 mx-sm-3 px-sm-4 px-md-3 mx-md-3"
 								aria-roledescription="table"
 							>
-								<div class="d-none d-lg-flex justify-content-between">
+								<div class="d-none px-3 d-lg-flex justify-content-between">
 									<div class="w-50">
 										<span class="pe-3">#</span>
 										<span>Titolo</span>
@@ -480,6 +499,48 @@
 								<i class="fas fa-book fs-4 opacity-75" FixedText></i>
 							</button>
 							<p class="mt-1 mb-0 text-white" id="FixedText">La tua Libreria</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- music player -->
+			<div class="music-player-container position-fixed w-100 bottom-0">
+				<audio src="" id="playing-song"></audio>
+				<div class="song">
+					<img class="current-song-image" width="80em" src="" alt="" />
+				</div>
+				<div class="music-player" data-playing="false">
+					<nav class="music-player-actions">
+						<ul>
+							<li>
+								<button id="player-previous-button">
+									<i class="fas fa-backward"></i>
+								</button>
+							</li>
+							<li>
+								<button id="player-play-pause-button" class="btn-play-pause">
+									<i class="fas fa-play"></i>
+									<i class="fas fa-pause"></i>
+								</button>
+							</li>
+							<li>
+								<button id="player-next-button">
+									<i class="fas fa-forward"></i>
+								</button>
+							</li>
+						</ul>
+					</nav>
+					<div class="progress-wrapper">
+						<div class="progress-container">
+							<div class="music-progress"></div>
+						</div>
+					</div>
+				</div>
+				<div class="options">
+					<div class="volume-wrapper">
+						<div class="volume-container">
+							<div class="volume-bar" data-volume="23"></div>
 						</div>
 					</div>
 				</div>
