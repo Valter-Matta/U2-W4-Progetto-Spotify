@@ -4,6 +4,10 @@ class Song {
 		this.title = song.title;
 		this.artist = song.artist.name;
 		this.albumTitle = song.album.title;
+		this.duration = song.duration;
+		this.views = song.rank;
+		this.id = song.id;
+		this.albumId = song.album.id;
 		// TODO private field
 	}
 }
