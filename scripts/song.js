@@ -8,6 +8,7 @@ class Song {
 		this.views = song.rank;
 		this.id = song.id;
 		this.albumId = song.album.id;
+		this.src = song.preview;
 		// TODO private field
 	}
 }

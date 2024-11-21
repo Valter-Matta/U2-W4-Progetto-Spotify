@@ -4,8 +4,13 @@ class AlbumPage extends Spotify {
 	#albumCover;
 	#albumTitle;
 	#albumArtist;
+	#musicElements;
 
-	constructor(idAlbum, { table, albumCover, albumTitle, albumArtist }) {
+	constructor(
+		idAlbum,
+		{ table, albumCover, albumTitle, albumArtist },
+		musicElements,
+	) {
 		super();
 
 		if (
@@ -20,15 +25,18 @@ class AlbumPage extends Spotify {
 		this.#albumCover = albumCover;
 		this.#albumTitle = albumTitle;
 		this.#albumArtist = albumArtist;
+		this.#musicElements = musicElements;
 	}
 
 	populateTable() {
-		return this.queryBySong(this.#idAlbum, tracks =>
-			new GraphicPlaylist(
+		return this.queryBySong(this.#idAlbum, tracks => {
+			const playlist = new GraphicPlaylist(
 				this.#table,
 				...tracks.map(track => new Song(track)),
-			).renderAlbumPage(),
-		);
+			).renderAlbumPage();
+
+			new MusicPlayer(this.#musicElements, playlist);
+		});
 	}
 
 	populateHero() {

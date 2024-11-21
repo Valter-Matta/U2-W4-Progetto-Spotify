@@ -91,5 +91,6 @@ class GraphicPlaylist extends Playlist {
 				}),
 			),
 		);
+		return this;
 	}
 }

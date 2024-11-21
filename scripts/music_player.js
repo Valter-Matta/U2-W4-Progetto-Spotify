@@ -238,7 +238,7 @@ class MusicPlayer {
 	 */
 	#updateProgressBar({ srcElement }) {
 		const { currentTime } = srcElement;
-		const duration = this.#playlist.current().duration;
+		const duration = this.#songElement.duration;
 		const progressPercent = (currentTime / duration) * 100;
 		this.#progressBar.style.width = `${progressPercent}%`;
 	}
@@ -251,7 +251,7 @@ class MusicPlayer {
 	 */
 	#jumpToTime({ offsetX }) {
 		const width = this.#progressWrapper.clientWidth;
-		const duration = this.#playlist.current().duration;
+		const duration = this.#songElement.duration;
 		this.#songElement.currentTime = (offsetX / width) * duration;
 	}
 
