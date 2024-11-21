@@ -133,7 +133,7 @@ section i {
 	cursor: pointer;
 }
 
-.row {
+#RowCols {
 	margin-left: 0.5em !important;
 }
 
@@ -213,4 +213,45 @@ section i {
 
 #FixedText{
   opacity: 0.3;
+}
+
+
+
+@media screen and (max-width: 500px){
+	#RowCols{
+		width: 100%;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		margin-left: 0 !important;
+		padding-bottom: 5em;
+		}
+
+	#ColMiddle{
+		width: 100% !important;
+	}	
+}
+
+#divCentralCol {
+    overflow-y: auto;
+    height: calc(100vh - 330px);
+    overflow-x: hidden;
+}
+
+/* Personalizzazione della scrollbar */
+#divCentralCol::-webkit-scrollbar {
+    width: 12px; /* Larghezza della scrollbar */
+    opacity: 0.3; /* Opacità dell'intera scrollbar (non supportato in tutti i browser) */
+}
+
+#divCentralCol::-webkit-scrollbar-thumb {
+    background-color: #898989; /* Colore del thumb */
+    opacity: 0.5; /* Opacità del thumb */
+    border-radius: 0px; /* Arrotondamento per un look moderno */
+}
+
+#divCentralCol::-webkit-scrollbar-track {
+    background: #121212; /* Colore dello sfondo della scrollbar */
+    opacity: 0.2; /* Opacità del track */
 }

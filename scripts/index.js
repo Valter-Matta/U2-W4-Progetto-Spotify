@@ -91,3 +91,29 @@ else
 	image.addEventListener("load", function () {
 		console.log(colorThief.getColor(img));
 	});
+
+
+
+
+	//JS PER GLI STICKY BUTTON SU MOBILE//
+		// Bottone "Home"
+		const homeButton = document.querySelector('#StickyButtons .fa-home');
+		homeButton.addEventListener('click', () => {
+		  alert('Hai cliccato su Home!');
+		  //QUI PER ADESSO NON MI SERVE NIENTE, SONO GIA IN HOME
+		});
+	  
+		// Bottone "Search"
+		const searchButton = document.querySelector('#StickyButtons .fa-search');
+		searchButton.addEventListener('click', () => {
+		  alert('Hai cliccato su Search!');
+		  // QUI DEVO APRIRE LA PAGINA SEARCH-PAGE MOBILE
+		  window.location.href = './../search-page-mobile.html';
+		});
+	  
+		// Bottone "La tua Libreria"
+		const libraryButton = document.querySelector('#StickyButtons .fa-book');
+		libraryButton.addEventListener('click', () => {
+		  alert('Hai cliccato su La tua Libreria!');
+		  // QUI DEVO APRIRE LA PAGINA LIBRERIA
+		});

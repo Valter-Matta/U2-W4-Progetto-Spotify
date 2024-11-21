@@ -33,6 +33,7 @@
     flex: 1; /* Occupa tutto lo spazio rimanente */
     font-size: 16px;
     background-color: transparent;
+    color: white;
   }
 
   /* Stile per il testo segnaposto */
@@ -69,4 +70,33 @@
     .rectangle {
         height: 100px; /* Altezza modificata per dispositivi xs */
     }
+
+
+}
+
+.results-container {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro */
+  color: white;
+  max-height: 300px;  /* Altezza massima per mantenere lo scroll */
+  overflow-y: auto;   /* Abilita lo scroll verticale se necessario */
+  border-radius: 5px; /* Angoli arrotondati */
+  padding: 10px;      /* Spaziatura interna */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombra */
+  width: 90%;         /* Larghezza responsiva */
+  max-width: 800px;   /* Limite massimo per grandi schermi */
+  position: relative; /* Allineamento */
+  z-index: 1;
+  margin: 0 auto;     /* Centra il contenitore */
+
+}
+
+.results-container p {
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.results-container p:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Colore di hover */
 }
