@@ -68,6 +68,14 @@ class Playlist {
 		return this.current();
 	}
 
+	getSongByIndex(index) {
+		if (!(typeof index !== "Number"))
+			throw new Error("index must be an integer!");
+		if (index < 0 || index > this.length)
+			throw new Error(`index must be an integer between 1 and ${this.length}`);
+		return this.#songList[index - 1];
+	}
+
 	/**
 	 * Returns a new array iterator object that contains the values for each index in the playlist.
 	 * @returns {Iterator} An array iterator object.

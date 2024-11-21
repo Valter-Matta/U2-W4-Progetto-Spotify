@@ -56,9 +56,9 @@ class GraphicPlaylist extends Playlist {
 
 	renderAlbumPage() {
 		const rowSample = ({ index, title, artist, views, duration }) => `
-      <div class="d-flex py-3 justify-content-between align-items-center">
+      <div class="table-row d-flex p-3 justify-content-between align-items-center" data-index="${index}">
         <div class="d-flex align-items-center w-50">
-          <span class="pe-3 d-none d-lg-inline-block">${index}</span>
+          <span class="index-column pe-3 d-none d-lg-inline-block">${index}</span>
           <div
             class="d-flex flex-column ps-2 justify-content-start align-items-start spans-4"
           >

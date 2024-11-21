@@ -36,12 +36,10 @@ class HomePage extends Spotify {
 			)
 				return;
 			// ALBUM CLICK
-			Array.from(this.#playlistsContainer.querySelectorAll("& > *")).forEach(
-				element => {
-					if (element.contains(e.srcElement))
-						window.location.href = `album.html?&id=${element.dataset.id}`;
-				},
-			);
+			this.#playlistsContainer.querySelectorAll("& > *").forEach(element => {
+				if (element.contains(e.srcElement))
+					window.location.href = `album.html?&id=${element.dataset.id}`;
+			});
 		});
 	}
 

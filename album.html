@@ -60,6 +60,16 @@
 		<script type="text/javascript" src="./scripts/spotify.js" defer></script>
 		<script type="text/javascript" src="./scripts/album_page.js" defer></script>
 		<script type="text/javascript" src="./scripts/album.js" defer></script>
+
+		<style>
+			.table-row {
+				cursor: pointer;
+
+				&:hover {
+					background-color: #ffffff20;
+				}
+			}
+		</style>
 	</head>
 	<body class="text-white overflow-x-hidden">
 		<main>
@@ -285,7 +295,7 @@
 								class="d-flex flex-column mx-1 px-1 mx-sm-3 px-sm-4 px-md-3 mx-md-3"
 								aria-roledescription="table"
 							>
-								<div class="d-none d-lg-flex justify-content-between">
+								<div class="d-none px-3 d-lg-flex justify-content-between">
 									<div class="w-50">
 										<span class="pe-3">#</span>
 										<span>Titolo</span>
@@ -497,7 +507,9 @@
 			<!-- music player -->
 			<div class="music-player-container position-fixed w-100 bottom-0">
 				<audio src="" id="playing-song"></audio>
-				<div class="song">WIP</div>
+				<div class="song">
+					<img class="current-song-image" width="80em" src="" alt="" />
+				</div>
 				<div class="music-player" data-playing="false">
 					<nav class="music-player-actions">
 						<ul>
@@ -521,7 +533,7 @@
 					</nav>
 					<div class="progress-wrapper">
 						<div class="progress-container">
-							<div class="progress"></div>
+							<div class="music-progress"></div>
 						</div>
 					</div>
 				</div>
