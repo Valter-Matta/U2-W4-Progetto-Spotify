@@ -24,6 +24,23 @@ class HomePage extends Spotify {
 		this.#playlistsContainer = playlistsContainer;
 		this.#spinnerSongs = spinnerSongs;
 		this.#spinnerAlbums = spinnerAlbums;
+
+		this.#playlistsContainer.addEventListener("click", e => {
+			// CTA CLICK
+			if (
+				Array.from(
+					this.#playlistsContainer.querySelectorAll("& .album-cta"),
+				).some(element => element.contains(e.srcElement))
+			)
+				return;
+			// ALBUM CLICK
+			Array.from(this.#playlistsContainer.querySelectorAll("& > *")).forEach(
+				element => {
+					if (element.contains(e.srcElement))
+						window.location.href = `album.html?&id=${element.dataset.id}`;
+				},
+			);
+		});
 	}
 
 	#addSong(genre) {

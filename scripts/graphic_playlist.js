@@ -16,7 +16,7 @@ class GraphicPlaylist extends Playlist {
 		const song = Array.from(this)[0];
 
 		const html = `
-			<div class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column justify-content-center m-0">
+			<div class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column justify-content-center m-0" data-id="${song.albumId}">
 				<div class="rounded-4 sfondo-card h-100">
           <div class="pb-md-3">
             <div class="d-flex flex-md-column p-3 pb-0 ">
@@ -37,7 +37,7 @@ class GraphicPlaylist extends Playlist {
               </div>
             </div>
           </div>
-          <section class="d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2">
+          <section class="album-cta d-flex justify-content-between align-items-center p-3 pt-0 p-lg-2">
             <div>
               <i class="fas fa-heart"></i>
               <i class="fas fa-ellipsis-v"></i>
