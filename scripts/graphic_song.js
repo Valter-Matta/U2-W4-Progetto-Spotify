@@ -8,7 +8,7 @@ class GraphicSong extends Song {
 		this.container.insertAdjacentHTML(
 			"beforeend",
 			`
-			<div class="graphic-song col col-6 col-md-4 p-0 d-flex align-items-center" data-id="${this.id}">
+			<div class="graphic-song col col-6 col-md-4 p-0 d-flex align-items-center " data-id="${this.id}">
 				<div class="d-flex align-items-center mx-3 sfondo w-100">
 					<img
 						class="rounded-start-2"
