@@ -140,7 +140,7 @@ section i {
 /* Contenitore della sezione scorrevole */
 .playlist-section {
 	height: calc(
-		100vh - 270px
+		86vh - 270px
 	); /* Altezza dinamica: adatta il valore "300px" per le altre sezioni sopra */
 	overflow-y: auto; /* Scroll verticale */
 	padding-right: 5px; /* Aggiunge spazio per la scrollbar */
@@ -231,11 +231,16 @@ section i {
 	#ColMiddle{
 		width: 100% !important;
 	}	
+
+	#divCentralCol{
+		overflow-y: hidden;
+		height: auto !important;
+	}
 }
 
 #divCentralCol {
     overflow-y: auto;
-    height: calc(100vh - 330px);
+    height: calc(118vh - 98px);
     overflow-x: hidden;
 }
 
@@ -255,3 +260,30 @@ section i {
     background: #121212; /* Colore dello sfondo della scrollbar */
     opacity: 0.2; /* Opacità del track */
 }
+
+
+
+@media screen and (min-width: 501px) and (max-width: 769px) {
+	#ColMiddle{
+		width: 100% !important
+	}
+
+	#divCentralCol{
+		height: auto !important;
+	}
+
+	#ColLeft{
+		display: none !important;
+	}
+
+	#ColRight{
+		display: none IM !important;
+	}
+  }
+
+
+  @media screen and (min-width: 769px){
+	#StickyButtons{
+		display: none !important;
+	}
+  }
