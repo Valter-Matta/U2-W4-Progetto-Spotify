@@ -1,5 +1,5 @@
 // DODOC
-class HomePage {
+class HomePage extends Spotify {
 	#songsContainer;
 	#playlistsContainer;
 	#spinnerSongs;
@@ -11,6 +11,8 @@ class HomePage {
 		spinnerSongs,
 		spinnerAlbums,
 	}) {
+		super();
+
 		if (
 			![songsContainer, playlistsContainer, spinnerSongs, spinnerAlbums].every(
 				element => element instanceof HTMLElement,
@@ -24,37 +26,8 @@ class HomePage {
 		this.#spinnerAlbums = spinnerAlbums;
 	}
 
-	#query(query, error, callback) {
-		return fetch(query)
-			.then(result => {
-				if (result.ok) return result.json();
-				else throw error;
-			})
-			.then(response => callback(response));
-	}
-
-	#queryByGenre(genre, callback) {
-		return this.#query(
-			`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`,
-			new Error(
-				`Error fetching data from Deezer API: https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`,
-			),
-			({ data: songs }) => callback(songs),
-		);
-	}
-
-	#queryBySong(id, callback) {
-		return this.#query(
-			`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
-			new Error(
-				`Error fetching data from Deezer API: https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
-			),
-			({ tracks: { data: songs } }) => callback(songs),
-		);
-	}
-
 	#addSong(genre) {
-		return this.#queryByGenre(genre, songs => {
+		return this.queryByGenre(genre, songs => {
 			const songObj = songs[Math.floor(Math.random() * songs.length)];
 			new GraphicSong(songObj, this.#songsContainer).render();
 			this.#spinnerSongs.classList.add("d-none");
@@ -62,9 +35,10 @@ class HomePage {
 	}
 
 	#addAlbum(genre) {
-		return this.#queryByGenre(genre, songs => {
+		return this.queryByGenre(genre, songs => {
 			const createAlbum = ({ album: { id } }) => {
-				this.#queryBySong(id, albumSongs => {
+				this.queryBySong(id, albumSongs => {
+					console.log(albumSongs);
 					if (albumSongs.length >= 4)
 						new GraphicPlaylist(
 							this.#playlistsContainer,

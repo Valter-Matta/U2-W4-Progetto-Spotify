@@ -1,3 +1,5 @@
+"use strict";
+
 const songsContainer = document.getElementById("buonasera-collection");
 const playlistsContainer = document.getElementById("player-card-container");
 const spinnerSongs = document.querySelector(".spinner-0");
@@ -26,20 +28,6 @@ homePageApp.populateAlbums(
 	"punkrock",
 	"defcon1",
 );
-
-// const addSongToSongContainer = addSong.bind(songsContainer);
-// const addPlaylistToPlaylistContainer = addPlaylist.bind(playlistsContainer);
-
-// ["gemitaiz", "marracash", "salmo", "punkrock", "defcon1", "fuck"].forEach(
-// 	genre =>
-// 		addSongToSongContainer(genre).then(spinnerSongs.classList.add("d-none")),
-// );
-
-// ["gemitaiz", "marracash", "salmo", "punkrock", "defcon1"].forEach(genre =>
-// 	addPlaylistToPlaylistContainer(genre).then(
-// 		spinnerAlbums.classList.add("d-none"),
-// 	),
-// );
 
 // COLOR
 
