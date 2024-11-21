@@ -22,6 +22,8 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="./assets/css/album-page.css" />
+		<!-- css player -->
+		<link rel="stylesheet" href="./assets/css/player.css" />
 
 		<!-- COLOR THIEF -->
 		<script
@@ -36,7 +38,14 @@
 		></script>
 
 		<!-- APP JS -->
+		<script
+			type="text/javascript"
+			src="./scripts/music_player.js"
+			defer
+		></script>
+
 		<script type="text/javascript" src="./scripts/song.js" defer></script>
+
 		<script
 			type="text/javascript"
 			src="./scripts/graphic_song.js"
@@ -480,6 +489,46 @@
 								<i class="fas fa-book fs-4 opacity-75" FixedText></i>
 							</button>
 							<p class="mt-1 mb-0 text-white" id="FixedText">La tua Libreria</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- music player -->
+			<div class="music-player-container position-fixed w-100 bottom-0">
+				<audio src="" id="playing-song"></audio>
+				<div class="song">WIP</div>
+				<div class="music-player" data-playing="false">
+					<nav class="music-player-actions">
+						<ul>
+							<li>
+								<button id="player-previous-button">
+									<i class="fas fa-backward"></i>
+								</button>
+							</li>
+							<li>
+								<button id="player-play-pause-button" class="btn-play-pause">
+									<i class="fas fa-play"></i>
+									<i class="fas fa-pause"></i>
+								</button>
+							</li>
+							<li>
+								<button id="player-next-button">
+									<i class="fas fa-forward"></i>
+								</button>
+							</li>
+						</ul>
+					</nav>
+					<div class="progress-wrapper">
+						<div class="progress-container">
+							<div class="progress"></div>
+						</div>
+					</div>
+				</div>
+				<div class="options">
+					<div class="volume-wrapper">
+						<div class="volume-container">
+							<div class="volume-bar" data-volume="23"></div>
 						</div>
 					</div>
 				</div>
