@@ -4,10 +4,6 @@
 	box-sizing: border-box;
 }
 
-html {
-	font-size: 62.5%;
-}
-
 ul,
 li {
 	list-style: none;
@@ -19,18 +15,19 @@ body {
 
 .music-player-container {
 	display: flex;
-	padding: 2em;
-	padding-top: 3rem;
+	padding: 1.4em;
+	padding-top: 2em;
 	background-color: #333;
 	justify-content: space-between;
 	align-items: center;
+	font-size: 62.5%;
 }
 
 .music-player {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1.4rem;
+	gap: 1.4em;
 	flex-grow: 1;
 }
 
@@ -48,11 +45,11 @@ body {
 
 	.fas {
 		color: #c7c7c7;
-		font-size: 1.6rem;
+		font-size: 1.6em;
 	}
 
 	.btn-play-pause .fas {
-		font-size: 2.4rem;
+		font-size: 2.4em;
 	}
 }
 
@@ -66,13 +63,13 @@ body {
 }
 
 .progress-container,
-.progress {
+.music-progress {
 	height: 5px;
 	width: 100%;
 	border-radius: 2.5px;
 	background-color: #c7c7c7;
 }
-.progress {
+.music-progress {
 	width: 0;
 	background-color: #0f0;
 	position: relative;
