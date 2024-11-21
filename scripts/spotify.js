@@ -25,6 +25,10 @@ class Spotify {
 				`Error fetching data from Deezer API: https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
 			),
 			({ tracks: { data: songs } }) => callback(songs),
+		).catch(e =>
+			console.log(
+				`${e instanceof TypeError ? "Invalid ID" : "No internet connection"}`,
+			),
 		);
 	}
 }

@@ -38,6 +38,7 @@ class HomePage extends Spotify {
 		return this.queryByGenre(genre, songs => {
 			const createAlbum = ({ album: { id } }) => {
 				this.queryBySong(id, albumSongs => {
+					console.log(albumSongs);
 					if (albumSongs.length >= 4)
 						new GraphicPlaylist(
 							this.#playlistsContainer,

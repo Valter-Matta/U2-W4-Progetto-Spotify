@@ -6,6 +6,12 @@ class GraphicPlaylist extends Playlist {
 		this.#container = container;
 	}
 
+	#toMinutes(seconds) {
+		const minutes = Math.floor(seconds / 60);
+		const ss = `${seconds % 60}`.padStart(2, 0);
+		return `${minutes}:${ss}`;
+	}
+
 	render() {
 		const song = Array.from(this)[0];
 
@@ -46,5 +52,44 @@ class GraphicPlaylist extends Playlist {
 		`;
 
 		this.#container.insertAdjacentHTML("beforeend", html);
+	}
+
+	renderAlbumPage() {
+		const rowSample = ({ index, title, artist, views, duration }) => `
+      <div class="d-flex py-3 justify-content-between align-items-center">
+        <div class="d-flex align-items-center w-50">
+          <span class="pe-3 d-none d-lg-inline-block">${index}</span>
+          <div
+            class="d-flex flex-column ps-2 justify-content-start align-items-start spans-4"
+          >
+            <span>${title}</span>
+            <span>${artist}</span>
+          </div>
+        </div>
+        <span class="w-25 text-end d-none d-lg-inline-block">${views}</span>
+
+        <span class="w-25 text-end d-none d-lg-inline-block">
+          ${duration}
+        </span>
+        <span class="w-25 text-end d-lg-none fs-3">
+          <i
+            class="bi bi-three-dots-vertical px-2 px-md-4 px-lg-3 order-lg-2"
+          ></i>
+        </span>
+      </div>
+    `;
+
+		Array.from(this).forEach((song, i) =>
+			this.#container.insertAdjacentHTML(
+				"beforeEnd",
+				rowSample({
+					index: i + 1,
+					title: song.title,
+					artist: song.artist,
+					views: song.views,
+					duration: this.#toMinutes(song.duration),
+				}),
+			),
+		);
 	}
 }

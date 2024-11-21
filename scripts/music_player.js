@@ -55,23 +55,22 @@ class MusicPlayer {
 		playlist,
 	) {
 		// VALIDATE HTML ELEMENTS
-		for (const element of [
-			musicPlayerElement,
-			songElement,
-			playPauseButton,
-			nextButton,
-			previousButton,
-			progressBar,
-			progressWrapper,
-			volumeBar,
-			volumeWrapper,
-		]) {
-			if (!(element instanceof HTMLElement)) {
-				throw new Error(
-					"Invalid HTML element: all HTML elements must be instances of HTMLElement",
-				);
-			}
-		}
+		if (
+			![
+				musicPlayerElement,
+				songElement,
+				playPauseButton,
+				nextButton,
+				previousButton,
+				progressBar,
+				progressWrapper,
+				volumeBar,
+				volumeWrapper,
+			].every(element => element instanceof HTMLElement)
+		)
+			throw new Error(
+				"Invalid HTML element: all HTML elements must be instances of HTMLElement",
+			);
 
 		// ASSIGN HTML ELEMENTS
 		this.#musicPlayerElement = musicPlayerElement;
