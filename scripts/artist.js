@@ -197,6 +197,8 @@ const urlParams = new URLSearchParams(window.location.search);
 // Ottieni il valore del parametro 'artist'
 const artistNameFromURL = urlParams.get('artist');
 
+
+
 // Salva il valore in una costante
 console.log("Nome dell'artista dalla URL:", artistNameFromURL);
 
