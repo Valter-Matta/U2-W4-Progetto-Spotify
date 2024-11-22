@@ -171,3 +171,24 @@
 #FixedText {
 	opacity: 0.3;
 }
+
+.culo a {
+	text-decoration: none;
+}
+
+.central-column::-webkit-scrollbar {
+	width: 10px;
+}
+
+.central-column::-webkit-scrollbar-track {
+	background: #121212;
+}
+
+.central-column::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 15px;
+}
+
+.central-column::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+}

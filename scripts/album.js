@@ -44,3 +44,13 @@ const albumPageApp = new AlbumPage(
 );
 albumPageApp.populateTable();
 albumPageApp.populateHero();
+
+const colorThief = new ColorThief();
+const image = document.getElementById("album-image");
+const section = document.querySelector(".gradiente");
+
+image.addEventListener("load", function () {
+	section.style.background = `linear-gradient(to top, #000, rgb(${colorThief
+		.getColor(image)
+		.join(",")}))`;
+});
