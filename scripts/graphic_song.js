@@ -1,3 +1,4 @@
+// DODOC
 class GraphicSong extends Song {
 	constructor(song, container) {
 		super(song);
