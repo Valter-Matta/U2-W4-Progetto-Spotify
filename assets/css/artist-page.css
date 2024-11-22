@@ -122,3 +122,100 @@
 #FixedText{
   opacity: 0.3;
 }
+
+
+.uniresection {
+  background-size: cover; /* L'immagine copre l'intera area della sezione */
+  background-position: center; /* Posiziona l'immagine al centro */
+  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+  height: 49vh
+}
+
+
+.centro{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.text-left{
+  text-align: left;
+  padding-left: 1em;
+}
+
+.nomeartista{
+  color: white;
+  font-size: 55px;
+}
+
+.SezioneArtista{
+  margin-top: 6em !important;
+}
+
+
+
+
+
+
+
+
+#containerino {
+	width: 50%;
+}
+@media screen and (min-width: 768px) {
+	#containerino {
+		width: 40%;
+		height: 40%;
+	}
+}
+@media screen and (min-width: 992px) {
+	#containerino {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+.icone {
+	font-size: 1rem;
+}
+.bi-play-circle-fill {
+	font-size: 1.4rem;
+}
+
+@media screen and (min-width: 440px) {
+	.icone {
+		font-size: 1.4rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 2.1rem;
+	}
+}
+@media screen and (min-width: 678px) {
+	.icone {
+		font-size: 1.8rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 2.5rem;
+	}
+}
+@media screen and (min-width: 768px) {
+	.icone {
+		font-size: 2.1rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 3.4rem;
+	}
+}
+@media screen and (min-width: 992px) {
+	.icone {
+		font-size: 1.5rem;
+	}
+	.bi-play-circle-fill {
+		font-size: 3rem;
+	}
+}
+
+.tracklist-container{
+  background-color: #1D1D1D;
+  height: 500px;
+  overflow-y: auto;
+}

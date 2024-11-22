@@ -185,3 +185,99 @@ function insertSearchBar() {
     searchIcon.addEventListener("click", insertSearchBar);
   }
   
+
+
+
+
+
+
+ // Estrai i parametri dalla query string
+const urlParams = new URLSearchParams(window.location.search);
+
+// Ottieni il valore del parametro 'artist'
+const artistNameFromURL = urlParams.get('artist');
+
+// Salva il valore in una costante
+console.log("Nome dell'artista dalla URL:", artistNameFromURL);
+
+// URL per ottenere i dati dell'artista
+const url = `https://striveschool-api.herokuapp.com/api/deezer/artist/${encodeURIComponent(artistNameFromURL)}`;
+
+console.log("URL per ottenere i dati dell'artista:", url);
+
+// Funzione per creare una riga della canzone
+const rowSample = ({ index, title, artist, views, duration }) => `
+  <div class="table-row d-flex p-3 justify-content-between align-items-center" data-index="${index}">
+    <div class="d-flex align-items-center w-50">
+      <span class="index-column pe-3 d-none d-lg-inline-block">${index}</span>
+      <div class="d-flex flex-column ps-2 justify-content-start align-items-start spans-4">
+        <span>${title}</span>
+        <span>${artist}</span>
+      </div>
+    </div>
+    <span class="w-25 text-end d-none d-lg-inline-block">${views}</span>
+    <span class="w-25 text-end d-none d-lg-inline-block">${duration}</span>
+    <span class="w-25 text-end d-lg-none fs-3">
+      <i class="bi bi-three-dots-vertical px-2 px-md-4 px-lg-3 order-lg-2"></i>
+    </span>
+  </div>
+`;
+
+fetch(url) // URL da dove recuperiamo i dati dell'artista
+  .then(response => response.json())  // Risposta JSON
+  .then(data => {
+    if (data) {
+      // Salviamo i dati in costanti
+      const artistId = data.id;
+      const artistName = data.name;
+      const artistLink = data.link;
+      const artistImage = data.picture_big; // Immagine di dimensione grande
+      const artistAlbumsCount = data.nb_album;
+      const artistFansCount = data.nb_fan;
+      const artistTracklist = data.tracklist;
+
+      // Stampa i dati nella console (per verifica)
+      console.log("Artist ID:", artistId);
+      console.log("Artist Name:", artistName);
+      console.log("Artist Link:", artistLink);
+      console.log("Artist Image:", artistImage);
+      console.log("Artist Albums Count:", artistAlbumsCount);
+      console.log("Artist Fans Count:", artistFansCount);
+      console.log("Artist Tracklist:", artistTracklist);
+
+      // Impostiamo dinamicamente l'immagine di sfondo per .SezioneArtista
+      document.querySelector(".uniresection").style.backgroundImage = `url(${artistImage})`;
+      document.querySelector(".nomeartista").innerHTML = artistName;
+      document.querySelector(".nbfan").innerHTML = artistFansCount.toLocaleString() + " ascoltatori mensili";
+      
+      // Recupera la tracklist (canzoni) dell'artista
+      fetch(artistTracklist)
+        .then(response => response.json())
+        .then(trackData => {
+          if (trackData && trackData.data) {
+            // Genera la lista delle canzoni
+            const trackListContainer = document.querySelector(".tracklist-container"); // Assicurati di avere un contenitore per la tracklist
+            trackData.data.forEach((track, index) => {
+              const trackHTML = rowSample({
+                index: index + 1, // Indice canzone
+                title: track.title, // Titolo della canzone
+                artist: track.artist.name, // Nome artista
+                views: track.nb_playback, // Numero di visualizzazioni
+                duration: new Date(track.duration * 1000).toISOString().substr(14, 5) // Durata in formato MM:SS
+              });
+              trackListContainer.innerHTML += trackHTML;
+            });
+          } else {
+            console.log("Nessuna traccia trovata.");
+          }
+        })
+        .catch(error => {
+          console.log("Errore nel recupero della tracklist:", error);
+        });
+    } else {
+      console.log("Artista non trovato.");
+    }
+  })
+  .catch(error => {
+    console.log("Errore:", error);
+  });
