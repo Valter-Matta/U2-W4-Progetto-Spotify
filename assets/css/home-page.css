@@ -301,3 +301,37 @@ section i {
 *::-webkit-scrollbar-thumb:hover {
 	background: #b3b3b3;
 }
+
+.playlist-section::-webkit-scrollbar {
+	width: 10px;
+}
+
+.playlist-section::-webkit-scrollbar-track {
+	background: #121212;
+}
+
+.playlist-section::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 15px;
+}
+
+.playlist-section::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+}
+
+.central-column::-webkit-scrollbar {
+	width: 10px;
+}
+
+.central-column::-webkit-scrollbar-track {
+	background: #121212;
+}
+
+.central-column::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 15px;
+}
+
+.central-column::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+}
