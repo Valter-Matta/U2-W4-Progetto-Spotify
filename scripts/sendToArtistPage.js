@@ -5,6 +5,7 @@ function getAllTitoliArtistiWithDelay() {
   
         // Controlla se ci sono 6 elementi
         if (titoloArtisti.length === 6) {
+          console.log("ciaone")
           clearInterval(checkInterval); // Ferma il controllo quando ci sono 6 elementi
           const artistiArray = Array.from(titoloArtisti).map(el => el.textContent);
   
@@ -17,7 +18,7 @@ function getAllTitoliArtistiWithDelay() {
               window.location.href = artistPageUrl; // Redirige alla tua pagina dell'artista
             });
           });
-  
+          console.log(artistiArray)
           resolve(artistiArray); // Restituisce l'array degli artisti
         }
       }, 100); // Controlla ogni 100ms se gli elementi sono presenti

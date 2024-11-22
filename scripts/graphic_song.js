@@ -18,7 +18,7 @@ class GraphicSong extends Song {
 									/>
 									<div>
 											<p class="testo-a-capo px-2 m-0 fw-bold">${this.title}</p>
-											<p class=" px-2 m-0 fw-lighter">${this.artist}</p>
+											<p class=" px-2 m-0 fw-lighter titoloartista">${this.artist}</p>
 									</div>
 							</div>
 					</div>

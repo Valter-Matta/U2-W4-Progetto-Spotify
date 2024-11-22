@@ -219,3 +219,15 @@
   height: 500px;
   overflow-y: auto;
 }
+
+h6{
+  font-size: 16px;
+}
+
+.sottotitolo{
+  font-size: 13px !important
+}
+
+.sottotitolo2{
+  font-size: 12px !important;
+}
