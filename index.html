@@ -46,11 +46,7 @@
 	<body>
 		<main class="container-fluid">
 			<div class="row" id="RowCols">
-				<div
-					class="col col-lg-1 d-none d-md-block"
-					style="width: 20%; padding-left: 0"
-					id="ColLeft"
-				>
+				<div class="col col-lg-3 d-none d-lg-block" id="ColLeft">
 					<!-- Main Navigation -->
 					<div class="nav-section mt-0 p-3">
 						<div class="container-fluid text-white p-0">
@@ -155,7 +151,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col col-12 col-lg-8">
+				<div class="col col-12 col-lg-7">
 					<!-- carosello ok -->
 					<div
 						id="carouselExample"
@@ -293,53 +289,53 @@
 							<span class="visually-hidden">Next</span>
 						</button>
 					</div>
-				<div id="divCentralCol">	
-					<section id="buonasera-collection" class="row px-lg-0 g-3">
-						<div
-							class="header d-flex justify-content-between align-items-center pt-5"
-						>
-							<h1>Buonasera</h1>
+					<div id="divCentralCol">
+						<section id="buonasera-collection" class="row px-lg-0 g-3">
 							<div
-								class="d-flex d-lg-none justify-content-around align-items-center"
+								class="header d-flex justify-content-between align-items-center pt-5"
 							>
-								<div class="bell">
-									<i class="far fa-bell"></i>
-									<i id="dot" class="fas fa-circle"></i>
+								<h1>Buonasera</h1>
+								<div
+									class="d-flex d-lg-none justify-content-around align-items-center"
+								>
+									<div class="bell">
+										<i class="far fa-bell"></i>
+										<i id="dot" class="fas fa-circle"></i>
+									</div>
+									<i class="fas fa-history"></i>
+									<i class="fas fa-cog"></i>
 								</div>
-								<i class="fas fa-history"></i>
-								<i class="fas fa-cog"></i>
 							</div>
-						</div>
-						<ul
-							class="d-flex d-lg-none list-unstyled justify-content-start pt-3 fs-5"
+							<ul
+								class="d-flex d-lg-none list-unstyled justify-content-start pt-3 fs-5"
+							>
+								<li class="me-5 p-3">Musica</li>
+								<li class="p-3">Podcast e Show</li>
+							</ul>
+							<!-- Qui ora ci ficco uno spinner -->
+							<div class="d-flex justify-content-center">
+								<div class="spinner-border spinner-0" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+							</div>
+						</section>
+
+						<h1 class="mt-5 d-none d-lg-block">Altro di ciò che ti piace</h1>
+
+						<article
+							id="player-card-container"
+							class="row g-3 border-0 rounded-4 mt-3 mb-3"
 						>
-							<li class="me-5 p-3">Musica</li>
-							<li class="p-3">Podcast e Show</li>
-						</ul>
-						<!-- Qui ora ci ficco uno spinner -->
-						<div class="d-flex justify-content-center">
-							<div class="spinner-border spinner-0" role="status">
-								<span class="visually-hidden">Loading...</span>
+							<!-- Qui ora ci ficco uno spinner -->
+							<div class="d-flex justify-content-center">
+								<div class="spinner-border spinner-1" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
 							</div>
-						</div>
-					</section>
-
-					<h1 class="mt-5 d-none d-lg-block">Altro di ciò che ti piace</h1>
-
-					<article
-						id="player-card-container"
-						class="row g-3 border-0 rounded-4 mt-3 mb-3"
-					>
-						<!-- Qui ora ci ficco uno spinner -->
-						<div class="d-flex justify-content-center">
-							<div class="spinner-border spinner-1" role="status">
-								<span class="visually-hidden">Loading...</span>
-							</div>
-						</div>
-					</article>
+						</article>
+					</div>
 				</div>
-			</div>
-				<div class="col col-lg-1 d-none d-md-block" style="width: 15%" id="ColRight">
+				<div class="col col-lg-2 d-none d-lg-block" id="ColRight">
 					<div class="d-flex justify-content-between" id="DivAttivitàAmici">
 						<h6>Attività amici</h6>
 						<div
@@ -482,33 +478,59 @@
 				</div>
 			</div>
 
-			<div id="StickyButtons" class="d-block d-lg-none text-white p-3" style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 0; font-size: 10px;   font-family: 'Spotify Circular', sans-serif; height: 100px;">
+			<div
+				id="StickyButtons"
+				class="d-block d-lg-none text-white p-3"
+				style="
+					position: fixed;
+					bottom: 0;
+					width: 100%;
+					text-align: center;
+					background-color: rgba(0, 0, 0, 0.8);
+					padding: 0;
+					font-size: 10px;
+					font-family: 'Spotify Circular', sans-serif;
+					height: 100px;
+				"
+			>
 				<div class="container-fluid">
-				  <div class="row justify-content-evenly align-items-center" style="margin: 0;">
-					<!-- Primo bottone -->
-					<div class="col-auto text-center">
-					  <button class="btn" style="background: none; border: none; color: white;">
-						<i class="fas fa-home fs-4 " FixedText></i>
-					  </button>
-					  <p class="mt-1 mb-0 text-white" id="FixedText">Home</p>
+					<div
+						class="row justify-content-evenly align-items-center"
+						style="margin: 0"
+					>
+						<!-- Primo bottone -->
+						<div class="col-auto text-center">
+							<button
+								class="btn"
+								style="background: none; border: none; color: white"
+							>
+								<i class="fas fa-home fs-4" FixedText></i>
+							</button>
+							<p class="mt-1 mb-0 text-white" id="FixedText">Home</p>
+						</div>
+						<!-- Secondo bottone -->
+						<div class="col-auto text-center">
+							<button
+								class="btn"
+								style="background: none; border: none; color: white"
+							>
+								<i class="fas fa-search fs-4 opacity-75" FixedText></i>
+							</button>
+							<p class="mt-1 mb-0 text-white" id="FixedText">Search</p>
+						</div>
+						<!-- Terzo bottone -->
+						<div class="col-auto text-center">
+							<button
+								class="btn"
+								style="background: none; border: none; color: white"
+							>
+								<i class="fas fa-book fs-4 opacity-75" FixedText></i>
+							</button>
+							<p class="mt-1 mb-0 text-white" id="FixedText">La tua Libreria</p>
+						</div>
 					</div>
-					<!-- Secondo bottone -->
-					<div class="col-auto text-center">
-					  <button class="btn" style="background: none; border: none; color: white;">
-						<i class="fas fa-search fs-4 opacity-75 " FixedText></i>
-					  </button>
-					  <p class="mt-1 mb-0 text-white" id="FixedText">Search</p>
-					</div>
-					<!-- Terzo bottone -->
-					<div class="col-auto text-center">
-					  <button class="btn" style="background: none; border: none; color: white;">
-						<i class="fas fa-book fs-4 opacity-75 " FixedText></i>
-					  </button>
-					  <p class="mt-1 mb-0 text-white" id="FixedText">La tua Libreria</p>
-					</div>
-				  </div>
 				</div>
-			  </div>
+			</div>
 			<!-- music player -->
 			<div class="music-player-container position-fixed w-100 bottom-0">
 				<audio src="" id="playing-song"></audio>

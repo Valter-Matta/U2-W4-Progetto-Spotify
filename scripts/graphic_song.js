@@ -14,7 +14,8 @@ class GraphicSong extends Song {
 
 		// Ottieni la larghezza dello schermo e imposta la classe corretta
 		const screenWidth = window.innerWidth;
-		const colClass = screenWidth > 375 && screenWidth <= 475 ? "col-6" : "col-12";
+		const colClass =
+			screenWidth > 375 && screenWidth <= 475 ? "col-12" : "col-6";
 
 		// Inserisci il nuovo elemento nel container
 		this.container.insertAdjacentHTML(
