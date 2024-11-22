@@ -60,7 +60,16 @@
 		<script type="text/javascript" src="./scripts/spotify.js" defer></script>
 		<script type="text/javascript" src="./scripts/album_page.js" defer></script>
 		<script type="text/javascript" src="./scripts/album.js" defer></script>
+		<<<<<<< HEAD
 		<!-- <script type="text/javascript" src="./scripts/album2.js" defer></script> -->
+		=======
+		<script type="text/javascript" src="./scripts/backToHome.js" defer></script>
+		<script
+			type="text/javascript"
+			src="./scripts/SearchForAlbum.js"
+			defer
+		></script>
+		>>>>>>> main
 
 		<style>
 			.table-row {
@@ -87,7 +96,7 @@
 										<!-- Icona Home -->
 										<span>Home</span>
 									</li>
-									<li id="LiHome">
+									<li id="LiHome" class="search">
 										<i class="fas fa-search fs-6"></i>
 										<!-- Icona Cerca -->
 										<span>Cerca</span>
@@ -214,6 +223,10 @@
 									></i>
 								</a>
 							</div>
+
+							<!-- Contenitore vuoto per la barra di ricerca -->
+							<div id="search-container" class="mx-3"></div>
+
 							<div class="dropdown d-flex">
 								<button
 									class="btn btn-secondary rounded-5 bg-black"
@@ -242,6 +255,7 @@
 								</ul>
 							</div>
 						</section>
+
 						<!--sezione con immagine dell'album -->
 						<section
 							class="gradiente pt-4 pt-lg-5 pe-3 ps-sm-3 h-auto d-flex flex-column justify-content-md-start ps-md-3 justify-content-lg-start"
