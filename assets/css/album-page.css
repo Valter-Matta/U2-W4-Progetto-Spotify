@@ -171,3 +171,10 @@
 #FixedText {
 	opacity: 0.3;
 }
+
+
+#search-container{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	width: 43%;
+}
