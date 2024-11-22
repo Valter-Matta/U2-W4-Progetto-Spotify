@@ -27,4 +27,5 @@ homePageApp.populateAlbums(
 	"salmo",
 	"punkrock",
 	"defcon1",
+	"nayt",
 );

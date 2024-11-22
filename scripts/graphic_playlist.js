@@ -16,7 +16,7 @@ class GraphicPlaylist extends Playlist {
 		const song = Array.from(this)[0];
 
 		const html = `
-			<div class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl d-flex flex-column justify-content-center m-0" data-id="${song.albumId}">
+			<div class="col col-12 col-md-6 p-3 p-lg-2 col-lg-4 col-xxl-3 d-flex flex-column justify-content-center m-0" data-id="${song.albumId}">
 				<div class="rounded-4 sfondo-card h-100">
           <div class="pb-md-3">
             <div class="d-flex flex-md-column p-3 pb-0 ">
