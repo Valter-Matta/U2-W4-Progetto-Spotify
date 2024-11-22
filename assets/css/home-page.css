@@ -214,10 +214,8 @@ section i {
 	opacity: 0.3;
 }
 
-
-
-@media screen and (max-width: 500px){
-	#RowCols{
+@media screen and (max-width: 500px) {
+	#RowCols {
 		width: 100%;
 		margin: 0 auto;
 		align-items: center;
@@ -225,64 +223,81 @@ section i {
 		display: flex;
 		margin-left: 0 !important;
 		padding-bottom: 5em;
-		}
+	}
 
-	#ColMiddle{
+	#ColMiddle {
 		width: 100% !important;
-	}	
+	}
 
-	#divCentralCol{
+	#divCentralCol {
 		overflow-y: hidden;
 		height: auto !important;
 	}
 }
 
-#divCentralCol {
-    overflow-y: auto;
-    height: calc(118vh - 98px);
-    overflow-x: hidden;
-}
-
 /* Personalizzazione della scrollbar */
 #divCentralCol::-webkit-scrollbar {
-    width: 12px; /* Larghezza della scrollbar */
-    opacity: 0.3; /* Opacità dell'intera scrollbar (non supportato in tutti i browser) */
+	width: 12px; /* Larghezza della scrollbar */
+	opacity: 0.3; /* Opacità dell'intera scrollbar (non supportato in tutti i browser) */
 }
 
 #divCentralCol::-webkit-scrollbar-thumb {
-    background-color: #898989; /* Colore del thumb */
-    opacity: 0.5; /* Opacità del thumb */
-    border-radius: 0px; /* Arrotondamento per un look moderno */
+	background-color: #898989; /* Colore del thumb */
+	opacity: 0.5; /* Opacità del thumb */
+	border-radius: 0px; /* Arrotondamento per un look moderno */
 }
 
 #divCentralCol::-webkit-scrollbar-track {
-    background: #121212; /* Colore dello sfondo della scrollbar */
-    opacity: 0.2; /* Opacità del track */
+	background: #121212; /* Colore dello sfondo della scrollbar */
+	opacity: 0.2; /* Opacità del track */
 }
 
-
-
 @media screen and (min-width: 501px) and (max-width: 769px) {
-	#ColMiddle{
-		width: 100% !important
+	#ColMiddle {
+		width: 100% !important;
 	}
 
-	#divCentralCol{
+	#divCentralCol {
 		height: auto !important;
 	}
 
-	#ColLeft{
+	#ColLeft {
 		display: none !important;
 	}
 
-	#ColRight{
+	#ColRight {
 		display: none IM !important;
 	}
-  }
+}
 
+.testo-a-capo {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
-  @media screen and (min-width: 769px){
+/* @media screen and (min-width: 769px){
 	#StickyButtons{
 		display: none !important;
 	}
-  }
+  } */
+
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #121212;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+}

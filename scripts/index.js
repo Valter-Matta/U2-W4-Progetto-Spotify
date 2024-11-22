@@ -28,12 +28,3 @@ homePageApp.populateAlbums(
 	"punkrock",
 	"defcon1",
 );
-
-// COLOR
-
-// const colorThief = new ColorThief();
-// const img = document.querySelector("img");
-
-// image.addEventListener("load", function () {
-//     console.log(colorThief.getColor(img));
-// });

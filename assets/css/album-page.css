@@ -172,9 +172,23 @@
 	opacity: 0.3;
 }
 
+.culo a {
+	text-decoration: none;
+}
 
-#search-container{
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-	width: 43%;
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #121212;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
 }

@@ -32,7 +32,7 @@ class GraphicPlaylist extends Playlist {
                   <h5 class="opacity-50 fw-light">
                     <span>${song.artist}</span>
                   </h5>
-                  <p class="card-text fw-bold">${song.albumTitle}</p>
+                  <p class="testo-a-capo card-text fw-bold">${song.albumTitle}</p>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@ class GraphicPlaylist extends Playlist {
 
 	renderAlbumPage() {
 		const rowSample = ({ index, title, artist, views, duration }) => `
-      <div class="table-row d-flex p-3 justify-content-between align-items-center" data-index="${index}">
+      <div class="table-row d-flex py-3 p-2 p-md-3 justify-content-between align-items-center" data-index="${index}">
         <div class="d-flex align-items-center w-50">
           <span class="index-column pe-3 d-none d-lg-inline-block">${index}</span>
           <div
