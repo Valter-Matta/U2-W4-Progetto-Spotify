@@ -28,18 +28,9 @@ class HomePage extends Spotify {
 		this.#initPlayer("rock");
 
 		this.#playlistsContainer.addEventListener("click", e => {
-			// CTA CLICK
-			if (
-				Array.from(
-					this.#playlistsContainer.querySelectorAll("& .album-cta"),
-				).some(element => element.contains(e.srcElement))
-			)
-				return;
-			// ALBUM CLICK
-			this.#playlistsContainer.querySelectorAll("& > *").forEach(element => {
-				if (element.contains(e.srcElement))
-					window.location.href = `album.html?&id=${element.dataset.id}`;
-			});
+			const album = e.target.closest(".album-cta");
+			if (!album) return;
+			window.location.href = `album.html?&id=${album.dataset.id}`;
 		});
 	}
 
